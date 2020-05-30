@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>dataArray</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>图片选择器</string>
+			<key>classname</key>
+			<string>ImageSelectEditorView</string>
+			<key>describe</key>
+			<string>图片选择器描述</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>开关</string>
+			<key>classname</key>
+			<string>SwichButtonDemo</string>
+			<key>describe</key>
+			<string>图片选择器描述</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>条目选择</string>
+			<key>classname</key>
+			<string>SelectTitleViewController</string>
+			<key>describe</key>
+			<string>图片选择器描述</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>时间选择</string>
+			<key>classname</key>
+			<string>SelectDateView</string>
+			<key>describe</key>
+			<string>图片选择器描述</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>地址选择</string>
+			<key>classname</key>
+			<string>SelectAddressView</string>
+			<key>describe</key>
+			<string>图片选择器描述</string>
+		</dict>
+	</array>
+</dict>
+</plist>

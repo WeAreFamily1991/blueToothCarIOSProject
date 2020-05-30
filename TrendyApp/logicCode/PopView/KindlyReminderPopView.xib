@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jEd-9z-b07">
+                    <rect key="frame" x="43" y="227" width="289" height="213"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="温馨提示" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fv3-tf-bKG">
+                            <rect key="frame" x="72" y="35" width="145" height="21"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yzb-MW-eZH">
+                            <rect key="frame" x="38" y="76" width="217" height="54"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="217" id="3we-Uu-byE"/>
+                                <constraint firstAttribute="height" priority="1" constant="18" id="SMz-69-ijO"/>
+                            </constraints>
+                            <string key="text">您選擇的租期內包含了不可租用時間，請重新選擇</string>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" red="0.5999458432" green="0.60003471370000006" blue="0.59992641209999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9n6-t6-8EN">
+                            <rect key="frame" x="24" y="147" width="244" height="33"/>
+                            <color key="backgroundColor" red="0.048026353119999997" green="0.41920083759999999" blue="0.6022568345" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="33" id="tyE-oG-yfJ"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <state key="normal" title="去選車">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="9n6-t6-8EN" firstAttribute="top" secondItem="Yzb-MW-eZH" secondAttribute="bottom" constant="17" id="CC6-yU-qbv"/>
+                        <constraint firstItem="Yzb-MW-eZH" firstAttribute="leading" secondItem="jEd-9z-b07" secondAttribute="leading" constant="38" id="HXY-qX-SbE"/>
+                        <constraint firstAttribute="trailing" secondItem="9n6-t6-8EN" secondAttribute="trailing" constant="21" id="SIm-xD-Jha"/>
+                        <constraint firstItem="Yzb-MW-eZH" firstAttribute="top" secondItem="jEd-9z-b07" secondAttribute="top" constant="76" id="ZEC-H6-3KN"/>
+                        <constraint firstAttribute="trailing" secondItem="Yzb-MW-eZH" secondAttribute="trailing" constant="34" id="l3U-2E-2Jd"/>
+                        <constraint firstAttribute="bottom" secondItem="9n6-t6-8EN" secondAttribute="bottom" constant="33" id="tiC-Tn-DSQ"/>
+                        <constraint firstItem="9n6-t6-8EN" firstAttribute="leading" secondItem="jEd-9z-b07" secondAttribute="leading" constant="24" id="ztX-Zx-Ufd"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.19997885823249817" green="0.20001345872879028" blue="0.19997128844261169" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="jEd-9z-b07" secondAttribute="trailing" constant="43" id="A9G-dv-1eM"/>
+                <constraint firstItem="jEd-9z-b07" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="43" id="NQK-mV-qpB"/>
+                <constraint firstItem="jEd-9z-b07" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Tt3-wn-Icb"/>
+                <constraint firstItem="jEd-9z-b07" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="WhB-lX-ddQ"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="128" y="-101"/>
+        </view>
+    </objects>
+</document>

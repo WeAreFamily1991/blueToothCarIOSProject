@@ -1,0 +1,71 @@
+PODS:
+  - GoogleMaps (3.0.3):
+    - GoogleMaps/Maps (= 3.0.3)
+  - GoogleMaps/Base (3.0.3)
+  - GoogleMaps/Maps (3.0.3):
+    - GoogleMaps/Base
+  - GooglePlaces (3.0.3):
+    - GoogleMaps/Base (= 3.0.3)
+  - JCore (1.2.6)
+  - JPush (3.1.2):
+    - JCore (~> 1.2.6)
+  - mob_sharesdk (4.2.6):
+    - mob_sharesdk/ShareSDK (= 4.2.6)
+    - MOBFoundation
+  - mob_sharesdk/ShareSDK (4.2.6):
+    - MOBFoundation
+  - mob_sharesdk/ShareSDKExtension (4.2.6):
+    - mob_sharesdk/ShareSDK
+    - MOBFoundation
+  - mob_sharesdk/ShareSDKPlatforms/WeChat (4.2.6):
+    - mob_sharesdk/ShareSDK
+    - MOBFoundation
+  - MOBFoundation (3.2.2)
+  - Nimbus/AttributedLabel (1.0.0):
+    - Nimbus/Core
+  - Nimbus/Core (1.0.0)
+  - Reachability (3.1.1)
+  - SVProgressHUD (0.9)
+  - TXIMSDK_iOS (4.3.81)
+
+DEPENDENCIES:
+  - GoogleMaps (~> 3.0.3)
+  - GooglePlaces (~> 3.0.3)
+  - JPush
+  - mob_sharesdk
+  - mob_sharesdk/ShareSDKExtension
+  - mob_sharesdk/ShareSDKPlatforms/WeChat
+  - Nimbus/AttributedLabel
+  - Nimbus/Core (~> 1.0.0)
+  - Reachability (= 3.1.1)
+  - SVProgressHUD (= 0.9)
+  - TXIMSDK_iOS
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - GoogleMaps
+    - GooglePlaces
+    - JCore
+    - JPush
+    - mob_sharesdk
+    - MOBFoundation
+    - Nimbus
+    - Reachability
+    - SVProgressHUD
+    - TXIMSDK_iOS
+
+SPEC CHECKSUMS:
+  GoogleMaps: fd5c9fa58871781b9fb94d4936f19c69fe60ce32
+  GooglePlaces: f09e76993c9c3ee4af8f4f7f535bb94d6aa3b649
+  JCore: cae516dd2bf1a73b578ce6e1065abd49e709e0f7
+  JPush: d0cead70ba223a6a3b52749899ebda830dfbc49a
+  mob_sharesdk: e993f357a6f1581a956aea16ea142c9de0425bf7
+  MOBFoundation: b5ff4038ddb9a0f06b685b86408f905a10aa147c
+  Nimbus: 4e9350d3443d12fad6a30d8481a630bfa0a7a053
+  Reachability: dd9aa4fb6667b9f787690a74f53cb7634ce99893
+  SVProgressHUD: 7038ae9d6a0bd2c87560d2699eba642eef82d41e
+  TXIMSDK_iOS: e090871170fe94b6f87b0455b91668ece973656d
+
+PODFILE CHECKSUM: ed4fc43d5da1625bb29ce79b71ea27de067d052c
+
+COCOAPODS: 1.6.1

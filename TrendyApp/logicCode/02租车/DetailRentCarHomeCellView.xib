@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailRentCarHomeCellView">
+            <connections>
+                <outlet property="carName" destination="3lP-uX-um8" id="87z-tm-QxK"/>
+                <outlet property="desLabel" destination="cAF-XR-em0" id="olV-nm-dfS"/>
+                <outlet property="headerImage" destination="TNi-yk-qeK" id="atj-hU-Pby"/>
+                <outlet property="orlderPriceLabel" destination="34d-3J-Jib" id="1ym-9i-yrm"/>
+                <outlet property="priceLabel" destination="gBp-F3-bhN" id="dqV-Wz-sqV"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="vWS-fw-zKW">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="112"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="proimg1" translatesAutoresizingMaskIntoConstraints="NO" id="TNi-yk-qeK">
+                    <rect key="frame" x="15" y="21" width="94" height="70"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="經濟型" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3lP-uX-um8">
+                    <rect key="frame" x="119" y="29" width="240" height="21"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="三廂 | 1.5自助 | 乘坐5人" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cAF-XR-em0">
+                    <rect key="frame" x="119" y="50" width="242" height="12"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" red="0.5999458432" green="0.60003471370000006" blue="0.59992641209999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="4200元/月" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gBp-F3-bhN">
+                    <rect key="frame" x="119" y="71" width="72.5" height="18"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="18" id="Bsg-cs-4nS"/>
+                        <constraint firstAttribute="width" priority="99" constant="72.5" id="cI1-96-fpb"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.95740002390000001" green="0.22810179" blue="0.2272561193" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5400元/月" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="34d-3J-Jib">
+                    <rect key="frame" x="193" y="73" width="64" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" red="0.5999458432" green="0.60003471370000006" blue="0.59992641209999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="gBp-F3-bhN" firstAttribute="top" secondItem="vWS-fw-zKW" secondAttribute="top" constant="71" id="C1r-FW-ARc"/>
+                <constraint firstItem="34d-3J-Jib" firstAttribute="leading" secondItem="gBp-F3-bhN" secondAttribute="trailing" constant="1.5" id="Zwr-32-Ih0"/>
+                <constraint firstItem="gBp-F3-bhN" firstAttribute="leading" secondItem="vWS-fw-zKW" secondAttribute="leading" constant="119" id="glW-Ew-fgK"/>
+                <constraint firstItem="34d-3J-Jib" firstAttribute="top" secondItem="vWS-fw-zKW" secondAttribute="top" constant="73" id="v1F-hy-gSP"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="120.8" y="217.69115442278863"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="proimg1" width="335" height="250"/>
+    </resources>
+</document>
