@@ -19,9 +19,6 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *lblTip1;
 @property (weak, nonatomic) IBOutlet UILabel *lblAddress1;
-@property (weak, nonatomic) IBOutlet UILabel *lblTip2;
-@property (weak, nonatomic) IBOutlet UILabel *lblAddress2;
-
 @property (weak, nonatomic) IBOutlet UILabel *lblDateS1;
 @property (weak, nonatomic) IBOutlet UILabel *lblTimeS1;
 @property (weak, nonatomic) IBOutlet UILabel *lblDateS2;
@@ -48,10 +45,10 @@
         [self setAddValue:dicAddressE forKey:@"dicAddressE"];
         
         _lblTip1.text=kS(@"rentCarFast", @"takeCarAddress");
-        _lblTip2.text=kS(@"rentCarFast", @"returnCarAddress");
+//        _lblTip2.text=kS(@"rentCarFast", @"returnCarAddress");
         
         [_lblAddress1 addViewTarget:self select:@selector(selectSAddress)];
-        [_lblAddress2 addViewTarget:self select:@selector(selectEAddress)];
+//        [_lblAddress2 addViewTarget:self select:@selector(selectEAddress)];
         [_btnSub setTitle:kS(@"rentCarFast", @"goChooseCar") forState:UIControlStateNormal];
 //        [_btnNote setTitle:[NSString stringWithFormat:@" %@",kS(@"rentCarFast", @"rentCarNotice")] forState:UIControlStateNormal];
         [_btnNote setTitle:[NSString stringWithFormat:@" %@",kS(@"rentCarFast", @"rentCarNotice")] forState:UIControlStateNormal];
@@ -106,11 +103,11 @@
             }
             
             if ([[dicAddressE allKeys] count]) {
-                weakSelf.lblAddress2.text=[dicAddressE ojsk:@"address"];
-                weakSelf.lblAddress2.textColor=rgbTitleColor;
+//                weakSelf.lblAddress2.text=[dicAddressE ojsk:@"address"];
+//                weakSelf.lblAddress2.textColor=rgbTitleColor;
             }else{
-                weakSelf.lblAddress2.text=kS(@"setting_take_and_return_time", @"hint_setting_pls");
-                weakSelf.lblAddress2.textColor=rgbTxtGray;
+//                weakSelf.lblAddress2.text=kS(@"setting_take_and_return_time", @"hint_setting_pls");
+//                weakSelf.lblAddress2.textColor=rgbTxtGray;
             }
         }];
         

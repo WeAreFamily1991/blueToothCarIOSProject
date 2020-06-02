@@ -31,21 +31,21 @@
         UIImageView*imgVBluedot=[RHMethods imageviewWithFrame:CGRectMake(15, lbTime.frameYH+22, 9, 9) defaultimage:@"botblue1" supView:self];
         imgVBluedot.backgroundColor=rgb(255, 255, 255);
         UIView*viewVline=[UIView viewWithFrame:CGRectMake(imgVBluedot.centerX, imgVBluedot.frameYH, 2, 2) backgroundcolor:rgb(238,238,238) superView:self];
-        UILabel*lbStartAddress=[RHMethods lableX:34 Y:0 W:self.frameWidth-34-15 Height:14 font:14 superview:self withColor:rgb(102, 102, 102) text:@"取車點  上海市浦東新區耀華路532號"];
+        UILabel*lbStartAddress=[RHMethods lableX:34 Y:0 W:self.frameWidth-34-15 Height:14 font:14 superview:self withColor:rgb(102, 102, 102) text:@"取車/還車點  上海市浦東新區耀華路532號"];
         lbStartAddress.centerY=imgVBluedot.centerY;
         viewVline.centerX=imgVBluedot.centerX;
-        [lbStartAddress setColor:rgb(0, 0, 0) contenttext:@"取車點"];
+        [lbStartAddress setColor:rgb(0, 0, 0) contenttext:@"取車/還車點"];
         
-        UILabel*lbEndAddress=[RHMethods lableX:34 Y:lbStartAddress.frameYH+20 W:lbStartAddress.frameWidth Height:14 font:14 superview:self withColor:rgb(102, 102, 102) text:@"還車點  上海市浦東新區耀華路532號"];
-        [lbEndAddress setColor:rgb(0, 0, 0) contenttext:@"還車點"];
+//        UILabel*lbEndAddress=[RHMethods lableX:34 Y:lbStartAddress.frameYH+20 W:lbStartAddress.frameWidth Height:14 font:14 superview:self withColor:rgb(102, 102, 102) text:@"還車點  上海市浦東新區耀華路532號"];
+//        [lbEndAddress setColor:rgb(0, 0, 0) contenttext:@"還車點"];
         
-        UIImageView*imgVReddot=[RHMethods imageviewWithFrame:CGRectMake(15, 0, 9, 9) defaultimage:@"dotred1" supView:self];
-        imgVReddot.backgroundColor=rgb(255, 255, 255);
-        imgVReddot.centerY=lbEndAddress.centerY;
+//        UIImageView*imgVReddot=[RHMethods imageviewWithFrame:CGRectMake(15, 0, 9, 9) defaultimage:@"dotred1" supView:self];
+//        imgVReddot.backgroundColor=rgb(255, 255, 255);
+//        imgVReddot.centerY=lbEndAddress.centerY;
+//
+//        viewVline.frameHeight=imgVReddot.frameY-viewVline.frameY;
         
-        viewVline.frameHeight=imgVReddot.frameY-viewVline.frameY;
-        
-        self.frameHeight=lbEndAddress.frameYH+10;
+        self.frameHeight=lbStartAddress.frameYH+10;
         [self setAddUpdataBlock:^(id data, id weakme) {
             lbDate.text=[[data ojk:@"starttime_str"] firstObject];
             lbTime.text=[[data ojk:@"starttime_str"] lastObject];
@@ -53,8 +53,8 @@
             lbRTime.text=[[data ojk:@"endtime_str"] lastObject];
             lbStartAddress.text=[NSString stringWithFormat:@"%@  %@",kS(@"main_order", @"pick_up"),[data ojsk:@"pickup_address"]];
             [lbStartAddress setColor:rgb(0, 0, 0) contenttext:kS(@"main_order", @"pick_up")];
-            lbEndAddress.text=[NSString stringWithFormat:@"%@  %@",kS(@"main_order", @"drop_off"),[data ojsk:@"dropoff_address"]];
-            [lbEndAddress setColor:rgb(0, 0, 0) contenttext:kS(@"main_order", @"drop_off")];
+//            lbEndAddress.text=[NSString stringWithFormat:@"%@  %@",kS(@"main_order", @"drop_off"),[data ojsk:@"dropoff_address"]];
+//            [lbEndAddress setColor:rgb(0, 0, 0) contenttext:kS(@"main_order", @"drop_off")];
 //            day
             lbCenterTime.text=[NSString stringWithFormat:@"%@  %@",[data ojsk:@"day"],kS(@"main_order", @"day")];
         }];

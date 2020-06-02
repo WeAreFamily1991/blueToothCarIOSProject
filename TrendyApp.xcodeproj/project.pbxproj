@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		18F0E1841CEB41C3EC92513C /* libPods-TrendyApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 102A40A36E43330E083F952A /* libPods-TrendyApp.a */; };
+		3577179E248525B100304891 /* UILabel+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 3577179A248525B000304891 /* UILabel+Custom.m */; };
+		3577179F248525B100304891 /* UIButton+NZCustom.m in Sources */ = {isa = PBXBuildFile; fileRef = 3577179D248525B100304891 /* UIButton+NZCustom.m */; };
+		357717A42485EC8B00304891 /* SubscribeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 357717A22485EC8B00304891 /* SubscribeVC.m */; };
+		357717A52485EC8B00304891 /* SubscribeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 357717A32485EC8B00304891 /* SubscribeVC.xib */; };
 		D901ECD5223F44BC00C62C2F /* ScarRegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D901ECD4223F44BC00C62C2F /* ScarRegistrationViewController.m */; };
 		D901ECD8223F4B0D00C62C2F /* ScarRegistrationListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D901ECD7223F4B0D00C62C2F /* ScarRegistrationListViewController.m */; };
 		D901ECDB223F76FE00C62C2F /* OFCImageUpLoadCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = D901ECDA223F76FE00C62C2F /* OFCImageUpLoadCellView.m */; };
@@ -547,6 +551,13 @@
 
 /* Begin PBXFileReference section */
 		102A40A36E43330E083F952A /* libPods-TrendyApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TrendyApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3577179A248525B000304891 /* UILabel+Custom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Custom.m"; sourceTree = "<group>"; };
+		3577179B248525B000304891 /* UILabel+Custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Custom.h"; sourceTree = "<group>"; };
+		3577179C248525B100304891 /* UIButton+NZCustom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+NZCustom.h"; sourceTree = "<group>"; };
+		3577179D248525B100304891 /* UIButton+NZCustom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+NZCustom.m"; sourceTree = "<group>"; };
+		357717A12485EC8B00304891 /* SubscribeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubscribeVC.h; sourceTree = "<group>"; };
+		357717A22485EC8B00304891 /* SubscribeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubscribeVC.m; sourceTree = "<group>"; };
+		357717A32485EC8B00304891 /* SubscribeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubscribeVC.xib; sourceTree = "<group>"; };
 		3DDE5C8727153DBC8384A76B /* Pods-TrendyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrendyApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-TrendyApp/Pods-TrendyApp.release.xcconfig"; sourceTree = "<group>"; };
 		481CB3D47B85DDE27F5C671B /* Pods-TrendyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrendyApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TrendyApp/Pods-TrendyApp.debug.xcconfig"; sourceTree = "<group>"; };
 		D901ECD3223F44BC00C62C2F /* ScarRegistrationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScarRegistrationViewController.h; sourceTree = "<group>"; };
@@ -1620,6 +1631,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		357717A02485EC3800304891 /* 03预约 */ = {
+			isa = PBXGroup;
+			children = (
+				357717A12485EC8B00304891 /* SubscribeVC.h */,
+				357717A22485EC8B00304891 /* SubscribeVC.m */,
+				357717A32485EC8B00304891 /* SubscribeVC.xib */,
+			);
+			path = "03预约";
+			sourceTree = "<group>";
+		};
 		BB5E58BAAB8A0877792A08AE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1669,6 +1690,10 @@
 				D90F7753221B8CC9003A8EB5 /* AppDelegate.m */,
 				D90F7755221B8CC9003A8EB5 /* ViewController.h */,
 				D90F7756221B8CC9003A8EB5 /* ViewController.m */,
+				3577179C248525B100304891 /* UIButton+NZCustom.h */,
+				3577179D248525B100304891 /* UIButton+NZCustom.m */,
+				3577179B248525B000304891 /* UILabel+Custom.h */,
+				3577179A248525B000304891 /* UILabel+Custom.m */,
 				D90F7758221B8CC9003A8EB5 /* Main.storyboard */,
 				D90F775B221B8CCA003A8EB5 /* Assets.xcassets */,
 				D90F775D221B8CCA003A8EB5 /* LaunchScreen.storyboard */,
@@ -2777,13 +2802,14 @@
 				D946ECBA221BA77D001532E9 /* 00登录注册 */,
 				D946ECBB221BA77D001532E9 /* 01首页 */,
 				D946ECBC221BA77D001532E9 /* 02租车 */,
-				D946ECBD221BA77D001532E9 /* 03订单 */,
-				D946ECB9221BA77D001532E9 /* 04个人中心 */,
+				357717A02485EC3800304891 /* 03预约 */,
+				D946ECBD221BA77D001532E9 /* 04订单 */,
+				D946ECB9221BA77D001532E9 /* 05个人中心 */,
 			);
 			path = logicCode;
 			sourceTree = "<group>";
 		};
-		D946ECB9221BA77D001532E9 /* 04个人中心 */ = {
+		D946ECB9221BA77D001532E9 /* 05个人中心 */ = {
 			isa = PBXGroup;
 			children = (
 				D9C084732243549D0001D495 /* AppointmentRecord */,
@@ -2809,7 +2835,7 @@
 				D9FD3B37221CF7EA008F7B68 /* MinHomeCellView.h */,
 				D9FD3B38221CF7EA008F7B68 /* MinHomeCellView.m */,
 			);
-			path = "04个人中心";
+			path = "05个人中心";
 			sourceTree = "<group>";
 		};
 		D946ECBA221BA77D001532E9 /* 00登录注册 */ = {
@@ -2881,7 +2907,7 @@
 			path = "02租车";
 			sourceTree = "<group>";
 		};
-		D946ECBD221BA77D001532E9 /* 03订单 */ = {
+		D946ECBD221BA77D001532E9 /* 04订单 */ = {
 			isa = PBXGroup;
 			children = (
 				D9D859CD2224E44D00E22BB5 /* 订单流程页面 */,
@@ -2905,7 +2931,7 @@
 				D93D56652255F0A7004746D2 /* OrderSearchResultListViewController.h */,
 				D93D56662255F0A7004746D2 /* OrderSearchResultListViewController.m */,
 			);
-			path = "03订单";
+			path = "04订单";
 			sourceTree = "<group>";
 		};
 		D96609E3224374DC0025030F /* 选择到店地址 */ = {
@@ -3660,6 +3686,7 @@
 				D946EBFF221B925E001532E9 /* closei@2x.png in Resources */,
 				D946EC40221B925F001532E9 /* LFImagePickerController.bundle in Resources */,
 				D946EBFE221B925E001532E9 /* closei@3x.png in Resources */,
+				357717A52485EC8B00304891 /* SubscribeVC.xib in Resources */,
 				D9F6DD23221E513F005600A9 /* DetailRentCarHomeCellView.xib in Resources */,
 				D967405E2277FADA00E76830 /* README.md in Resources */,
 				D946EBDE221B925E001532E9 /* ImageBrowserChecked@3x.png in Resources */,
@@ -3778,6 +3805,7 @@
 				D946EC26221B925E001532E9 /* UIView+LFFrame.m in Sources */,
 				D96740602277FADA00E76830 /* TUIKitConfig.m in Sources */,
 				D90F7757221B8CC9003A8EB5 /* ViewController.m in Sources */,
+				3577179E248525B100304891 /* UILabel+Custom.m in Sources */,
 				D946EC25221B925E001532E9 /* LF_VideoUtils.m in Sources */,
 				D9319410222FCE9C0092A908 /* SortByPricePopView.m in Sources */,
 				D9E95C54222E5990002316C0 /* ApplicationForReservationCellView.m in Sources */,
@@ -4142,6 +4170,7 @@
 				D946EC80221B925F001532E9 /* WSModelObject.m in Sources */,
 				D946ECB3221B925F001532E9 /* DEMOHOMEViewController.m in Sources */,
 				D946EBF0221B925E001532E9 /* MJRefreshBackNormalFooter.m in Sources */,
+				3577179F248525B100304891 /* UIButton+NZCustom.m in Sources */,
 				D96740392277FADA00E76830 /* TMessageCell.m in Sources */,
 				D946EC59221B925F001532E9 /* SwichButtonDemo.m in Sources */,
 				D96951F32227B07A00C65C47 /* VehicleBaseInfoViewController.m in Sources */,
@@ -4158,6 +4187,7 @@
 				D9FF56AF223A1A3D002DC7E5 /* PGDatePicker+Time.m in Sources */,
 				D96740322277FADA00E76830 /* TFaceCell.m in Sources */,
 				D946ECAD221B925F001532E9 /* UIView+WebCache.m in Sources */,
+				357717A42485EC8B00304891 /* SubscribeVC.m in Sources */,
 				D946EBEF221B925E001532E9 /* MJRefreshBackStateFooter.m in Sources */,
 				D946EC8E221B925F001532E9 /* UIImageView+AFNetworking.m in Sources */,
 				D921E5C22241D2AB009FA86D /* BrandListPopView.m in Sources */,
@@ -4392,9 +4422,9 @@
 			baseConfigurationReference = 481CB3D47B85DDE27F5C671B /* Pods-TrendyApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = UP9LBUW474;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PW7B9Q75FT;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -4418,9 +4448,9 @@
 					"$(PROJECT_DIR)/TrendyApp/ShareSDK/ShareSDK/Support/PlatformSDK/WeChatSDK",
 				);
 				MARKETING_VERSION = 2.1.28;
-				PRODUCT_BUNDLE_IDENTIFIER = com.55like.TrendyApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.55like.TrendyApp.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "55like Development20200331";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WARNING_CFLAGS = (
 					"-Wno-deprecated-declarations",
@@ -4442,9 +4472,9 @@
 			baseConfigurationReference = 3DDE5C8727153DBC8384A76B /* Pods-TrendyApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = UP9LBUW474;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PW7B9Q75FT;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -4468,9 +4498,9 @@
 					"$(PROJECT_DIR)/TrendyApp/ShareSDK/ShareSDK/Support/PlatformSDK/WeChatSDK",
 				);
 				MARKETING_VERSION = 2.1.28;
-				PRODUCT_BUNDLE_IDENTIFIER = com.55like.TrendyApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.55like.TrendyApp.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "55like Distribution20200331";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WARNING_CFLAGS = (
 					"-Wno-deprecated-declarations",

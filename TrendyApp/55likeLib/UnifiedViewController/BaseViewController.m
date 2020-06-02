@@ -237,7 +237,7 @@
         
         UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, kScreenWidth-140, 44)];
         label.backgroundColor = [UIColor clearColor];
-        label.font = BoldFont(19);
+        label.font = DR_BoldFONT(19);
         label.textColor  = [UIColor blackColor];
         label.shadowOffset = CGSizeMake(0, 0);
         label.text = title;

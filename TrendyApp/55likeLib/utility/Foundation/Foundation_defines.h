@@ -51,7 +51,6 @@ selector:_selector name:_name object:nil];
 #define Y(obj)   (!obj?0:(obj).frame.origin.y)
 #define XW(obj) (X(obj)+W(obj))
 #define YH(obj) (Y(obj)+H(obj))
-#define BoldFont(x) [UIFont boldSystemFontOfSize:x]
 #define Font(x) [UIFont systemFontOfSize:x]
 
 #define CGRectMakeXY(x,y,size) CGRectMake(x,y,size.width,size.height)

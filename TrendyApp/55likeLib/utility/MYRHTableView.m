@@ -254,13 +254,10 @@ static BOOL _isRefreshOnlySize=NO;
             _defaultSection=obj;
             [self.sectionArray addObject:obj];
         }
-        
         _defaultSection.dataArray=self.dataArray;
-        
     }
     return _defaultSection;
 }
-
 
 -(instancetype)initWithFrame:(CGRect)frame style:(UITableViewStyle)style{
     self= [super initWithFrame:frame style:style];

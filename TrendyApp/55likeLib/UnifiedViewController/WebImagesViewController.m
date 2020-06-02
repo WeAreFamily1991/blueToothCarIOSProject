@@ -331,7 +331,7 @@ typedef void(^SaveImageCompletion)(NSError* error);
     NSMutableParagraphStyle *paragraph = [[NSMutableParagraphStyle alloc] init];
     paragraph.alignment = NSTextAlignmentRight;
     
-    //    NSDictionary *dict=@{NSFontAttributeName : BoldFont(16),
+    //    NSDictionary *dict=@{NSFontAttributeName : DR_BoldFONT(16),
     //                         NSParagraphStyleAttributeName : paragraph,
     //                         NSForegroundColorAttributeName : [UIColor whiteColor],
     //                         NSStrokeWidthAttributeName : @-3,
@@ -341,7 +341,7 @@ typedef void(^SaveImageCompletion)(NSError* error);
     shadow.shadowBlurRadius=5;//模糊度
     shadow.shadowColor=[UIColor blackColor];
     shadow.shadowOffset=CGSizeMake(1, 3);
-    NSDictionary *dict=@{NSFontAttributeName : BoldFont(16),
+    NSDictionary *dict=@{NSFontAttributeName : DR_BoldFONT(16),
                          NSParagraphStyleAttributeName : paragraph,
                          NSForegroundColorAttributeName : [UIColor whiteColor],
                          NSShadowAttributeName : shadow,

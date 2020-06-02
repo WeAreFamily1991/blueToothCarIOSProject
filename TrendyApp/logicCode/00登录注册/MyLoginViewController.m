@@ -46,8 +46,7 @@
     imgVBG.alpha=0.8;
     UIImageView*imgVLogo=[RHMethods imageviewWithFrame:CGRectMake(0, 71, 163, 50) defaultimage:@"logoi" supView:imgVBG];
     [imgVLogo beCX];
-    
-    
+        
     _mtableView =[[MYRHTableView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight-0) style:UITableViewStylePlain];
     _mtableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.view addSubview:_mtableView];
@@ -58,7 +57,6 @@
         viewContent.layer.cornerRadius=5;
         
         NSArray*arraytitle=@[kS(@"login", @"login_hint_user"),kS(@"login", @"login_hint_password"),];
-        
         NSArray*arrayImage=@[@"emaili",@"logini",];
         for (int i=0; i<arraytitle.count; i++) {
             UIView*viewContentCell=[UIView viewWithFrame:CGRectMake(0, 15+i*60, viewContent.frameWidth, 60) backgroundcolor:nil superView:viewContent];

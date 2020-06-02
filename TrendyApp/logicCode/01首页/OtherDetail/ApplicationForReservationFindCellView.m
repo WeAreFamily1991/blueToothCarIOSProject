@@ -19,8 +19,8 @@
 @interface ApplicationForReservationFindCellView ()
 @property (weak, nonatomic) IBOutlet UILabel *lblTip1;
 @property (weak, nonatomic) IBOutlet UILabel *lblAddress1;
-@property (weak, nonatomic) IBOutlet UILabel *lblTip2;
-@property (weak, nonatomic) IBOutlet UILabel *lblAddress2;
+//@property (weak, nonatomic) IBOutlet UILabel *lblTip2;
+//@property (weak, nonatomic) IBOutlet UILabel *lblAddress2;
 @property (weak, nonatomic) IBOutlet UILabel *lblTip3;
 @property (weak, nonatomic) IBOutlet UILabel *lblTip4;
 
@@ -42,14 +42,14 @@
         _showMessage=YES;
         __weak typeof(self) weakSelf=self;
         _swich1=[SwichButtonView viewWithFrame:CGRectMake(W(self)-70-15,0, 0, 0) backgroundcolor:nil superView:self];
-        _swich2=[SwichButtonView viewWithFrame:CGRectMake(W(self)-70-15, 0, 0, 0) backgroundcolor:nil superView:self];
+//        _swich2=[SwichButtonView viewWithFrame:CGRectMake(W(self)-70-15, 0, 0, 0) backgroundcolor:nil superView:self];
         _swich1.autoresizingMask=UIViewAutoresizingFlexibleLeftMargin;
-        _swich2.autoresizingMask=UIViewAutoresizingFlexibleLeftMargin;
+//        _swich2.autoresizingMask=UIViewAutoresizingFlexibleLeftMargin;
         _swich1.centerY=_lblAddress1.centerY;
-        _swich2.centerY=_lblAddress2.centerY;
+//        _swich2.centerY=_lblAddress2.centerY;
         
         _btnCity1=[RHMethods buttonWithFrame:CGRectMake(15, Y(_lblAddress1), 80, 45) title:@"" image:@"arrowb02" bgimage:nil supView:self];
-        _btnCity2=[RHMethods buttonWithFrame:CGRectMake(15, Y(_lblAddress2), 80, 45) title:@"" image:@"arrowb02" bgimage:nil supView:self];
+//        _btnCity2=[RHMethods buttonWithFrame:CGRectMake(15, Y(_lblAddress2), 80, 45) title:@"" image:@"arrowb02" bgimage:nil supView:self];
         _btnCity1.hidden=YES;
         _btnCity2.hidden=YES;
         [_btnCity1 addViewClickBlock:^(UIView *view) {
@@ -69,12 +69,12 @@
         [self setAddValue:dicAddressE forKey:@"dicAddressE"];
         
         _lblTip1.text=kS(@"findSelfHelp", @"takeCarAddress");
-        _lblTip2.text=kS(@"findSelfHelp", @"returnCarAddress");
+//        _lblTip2.text=kS(@"findSelfHelp", @"returnCarAddress");
         _lblTip3.text=kS(@"setting_take_and_return_time", @"hint_take_date");
         _lblTip4.text=kS(@"setting_take_and_return_time", @"hint_return_date");
         
         [_lblAddress1 addViewTarget:self select:@selector(selectSAddress)];
-        [_lblAddress2 addViewTarget:self select:@selector(selectEAddress)];
+//        [_lblAddress2 addViewTarget:self select:@selector(selectEAddress)];
         
         [self setAddUpdataBlock:^(id data, id weakme) {
             id selectData=[weakSelf getAddValueForKey:@"SelectDate"];
@@ -105,7 +105,7 @@
 //                UTILITY.swich2=weakSelf.swich2;
                 
                 weakSelf.lblAddress1.frame=CGRectMake(XW(weakSelf.btnCity1)+5, Y(weakSelf.lblAddress1), X(_swich1)-XW(weakSelf.btnCity1)-10, H(weakSelf.lblAddress1));
-                weakSelf.lblAddress2.frame=CGRectMake(XW(weakSelf.btnCity2)+5, Y(weakSelf.lblAddress2), X(_swich2)-XW(weakSelf.btnCity2)-10, H(weakSelf.lblAddress2));
+//                weakSelf.lblAddress2.frame=CGRectMake(XW(weakSelf.btnCity2)+5, Y(weakSelf.lblAddress2), X(_swich2)-XW(weakSelf.btnCity2)-10, H(weakSelf.lblAddress2));
                 [weakSelf.btnCity1 setTitle:[kUtility_Location.userCityTake ojsk:@"name"] forState:UIControlStateNormal];
                 [weakSelf.btnCity2 setTitle:[kUtility_Location.userCityReturn ojsk:@"name"] forState:UIControlStateNormal];
                 [UTILITY updateButtonImageTitleEdgeInsets_leftRight:weakSelf.btnCity1 space:4];
@@ -189,13 +189,13 @@
                     [dicAddressE setObject:[selectAddressE ojsk:@"lat"] forKey:@"lat"];
                 }
             }
-            if ([[dicAddressE allKeys] count]) {
-                weakSelf.lblAddress2.text=[dicAddressE ojsk:@"address"];
-                weakSelf.lblAddress2.textColor=rgbTitleColor;
-            }else{
-                weakSelf.lblAddress2.text=kS(@"findSelfHelp", @"returnCarAddressHint");
-                weakSelf.lblAddress2.textColor=rgbTxtGray;
-            }
+//            if ([[dicAddressE allKeys] count]) {
+////                weakSelf.lblAddress2.text=[dicAddressE ojsk:@"address"];
+////                weakSelf.lblAddress2.textColor=rgbTitleColor;
+//            }else{
+//                weakSelf.lblAddress2.text=kS(@"findSelfHelp", @"returnCarAddressHint");
+//                weakSelf.lblAddress2.textColor=rgbTxtGray;
+//            }
         }];
         
         [_swich1 swichChangeValue:^(id data, int status, NSString *msg) {
@@ -203,13 +203,13 @@
             [weakSelf updateData];
             [weakSelf dispachEvent];
         }];
-        [_swich2 swichChangeValue:^(id data, int status, NSString *msg) {
-            [weakSelf upDataMe];
-            [weakSelf updateData];
-            [weakSelf dispachEvent];
-        }];
+//        [_swich2 swichChangeValue:^(id data, int status, NSString *msg) {
+//            [weakSelf upDataMe];
+//            [weakSelf updateData];
+//            [weakSelf dispachEvent];
+//        }];
         _swich1.isOn=YES;
-        _swich2.isOn=YES;
+//        _swich2.isOn=YES;
         
         
         
@@ -375,18 +375,18 @@
                 [dicTemp setValue:[dicAddressS ojsk:@"id"] forKey:@"pick_up_id"];
             }
         }
-        NSMutableDictionary *dicAddressE=[self getAddValueForKey:@"dicAddressE"];
-        if (dicAddressE && [[dicAddressE allKeys] count]>0 && _swich2.isOn) {
-            [dicTemp setValue:[dicAddressE ojsk:@"id"] forKey:@"drop_off_id"];
-            if ([[dicAddressE ojsk:@"address_id"] notEmptyOrNull]) {
-//                [dicTemp setValue:[dicAddressE ojsk:@"address_id"] forKey:@"drop_off_id"];
-            }
-        }
+//        NSMutableDictionary *dicAddressE=[self getAddValueForKey:@"dicAddressE"];
+//        if (dicAddressE && [[dicAddressE allKeys] count]>0 && _swich2.isOn) {
+//            [dicTemp setValue:[dicAddressE ojsk:@"id"] forKey:@"drop_off_id"];
+//            if ([[dicAddressE ojsk:@"address_id"] notEmptyOrNull]) {
+////                [dicTemp setValue:[dicAddressE ojsk:@"address_id"] forKey:@"drop_off_id"];
+//            }
+//        }
         [dicTemp setValue:[kUtility_Location.userCityTake ojsk:@"id"] forKey:@"city_id"];
         [viewC setAddValue:dicTemp forKey:@"selectAddressDate"];
         
         [dicTemp setValue:_swich1.isOn?@"2":@"1" forKey:@"pick_up_type"];
-        [dicTemp setValue:_swich2.isOn?@"2":@"1" forKey:@"drop_off_type"];
+//        [dicTemp setValue:_swich2.isOn?@"2":@"1" forKey:@"drop_off_type"];
         DLog(@"值变更:%@",dicTemp);
         if (viewC!=nil && [viewC respondsToSelector:@selector(request1)]) {
             [viewC performSelector:@selector(request1) withObject:nil afterDelay:0.01];
@@ -424,16 +424,16 @@
     [dicTemp setValue:[dicAddressS ojsk:@"lng"] forKey:@"pickup_lng"];
     [dicTemp setValue:[dicAddressS ojsk:@"lat"] forKey:@"pickup_lat"];
     //还车方式 1 上门 2 到店
-    [dicTemp setValue:_swich2.isOn?@"2":@"1" forKey:@"dropoff"];
-    [dicTemp setValue:_swich2.isOn?@"2":@"1" forKey:@"drop_off_type"];
-    if (_swich2.isOn) {
-//        drop_off_id
-        [dicTemp setValue:[dicAddressE ojsk:@"id"] forKey:@"drop_off_id"];
-        if ([[dicAddressE ojsk:@"address_id"] notEmptyOrNull]) {
-//            [dicTemp setValue:[dicAddressE ojsk:@"address_id"] forKey:@"drop_off_id"];
-        }
-        
-    }
+//    [dicTemp setValue:_swich2.isOn?@"2":@"1" forKey:@"dropoff"];
+//    [dicTemp setValue:_swich2.isOn?@"2":@"1" forKey:@"drop_off_type"];
+//    if (_swich2.isOn) {
+////        drop_off_id
+//        [dicTemp setValue:[dicAddressE ojsk:@"id"] forKey:@"drop_off_id"];
+//        if ([[dicAddressE ojsk:@"address_id"] notEmptyOrNull]) {
+////            [dicTemp setValue:[dicAddressE ojsk:@"address_id"] forKey:@"drop_off_id"];
+//        }
+//
+//    }
     [dicTemp setValue:[dicAddressE ojsk:@"address"] forKey:@"dropoff_address"];
     [dicTemp setValue:[dicAddressE ojsk:@"lng"] forKey:@"dropoff_lng"];
     [dicTemp setValue:[dicAddressE ojsk:@"lat"] forKey:@"dropoff_lat"];

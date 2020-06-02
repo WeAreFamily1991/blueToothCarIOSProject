@@ -118,7 +118,7 @@ static CustomTabBar *_instance=nil;
     //	slideBg.frame = CGRectMake(-30, self.tabBar.frame.origin.y, slideBg.image.size.width, slideBg.image.size.height);
     //[imgView release];
     
-    NSArray *tarray=[[NSArray alloc]initWithObjects:kS(@"main", @"home"),kS(@"main", @"rentCar"),kS(@"main", @"order"),kS(@"main", @"mine"),nil];
+    NSArray *tarray=[[NSArray alloc]initWithObjects:kS(@"main", @"home"),kS(@"main", @"rentCar"),kS(@"main", @""),kS(@"main", @"order"),kS(@"main", @"mine"),nil];
     
     
     //创建按钮
@@ -137,16 +137,20 @@ static CustomTabBar *_instance=nil;
        
         
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-        btn.frame = CGRectMake(i*_width,0, _width, 49);
+        if (i!=2) {
+          btn.frame = CGRectMake(i*_width,0, _width, 49);
+        }else
+        {
+          btn.frame = CGRectMake(SCREEN_WIDTH/2-WScale(50),WScale(-40), WScale(100), WScale(100));
+        }
+        
         // btn.frame=CGRectMake(i*_width,self.tabBar.frame.origin.y+3, 53, 44);
         [btn addTarget:self action:@selector(selectedTab:) forControlEvents:UIControlEventTouchUpInside];
         btn.tag = i;
-        
-       
+               
         [btn setImage:[UIImage imageNamed:[NSString stringWithFormat:@"fmenuion%d",i+1]] forState:UIControlStateHighlighted];
         [btn setImage:[UIImage imageNamed:[NSString stringWithFormat:@"fmenui%d",i+1]] forState:UIControlStateNormal];
-        
-        
+                
         // [btn setImage:[UIImage imageNamed:[NSString stringWithFormat:@"tab%d%d",i+1,i+1]] forState:UIControlStateHighlighted];
         [btn setImageEdgeInsets:UIEdgeInsetsMake(0, 0, 10, 0)];
         [self.buttons addObject:btn];
@@ -155,19 +159,12 @@ static CustomTabBar *_instance=nil;
         UILabel *lblt=[RHMethods labelWithFrame:CGRectMake(X(btn), 34, W(btn), 15) font:Font(10) color:rgbTxtGray text:[tarray objectAtIndex:i]];
         [lblt setTextAlignment:NSTextAlignmentCenter];
         [self.lbls addObject:lblt];
-        
+        if (i==2) {
+            lblt.text =@"";
+        }
         [tabBarBackGroundView addSubview:lblt];
-        
-        
-        
     }
-    
-    
-    
     [self selectedTab:[self.buttons objectAtIndex:self.currentSelectedIndex]];
-    
-
-    
 //    NSInteger viewCount = self.viewControllers.count > 5 ? 5 : self.viewControllers.count;
 //    double _width = kScreenWidth / viewCount;
     
@@ -183,14 +180,12 @@ static CustomTabBar *_instance=nil;
             [tabBar addSubview:imagV];
         }
     }
-    
-
-    
 }
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController{
     UINavigationController *nav=(UINavigationController *)viewController;
     [nav popToRootViewControllerAnimated:NO];
 }
+
 - (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController{
 //    UINavigationController *nav=(UINavigationController *)viewController;
 //    DLog(@"________%ld",(long)nav.navigationBar.tag);
@@ -211,14 +206,11 @@ static CustomTabBar *_instance=nil;
 //        //        return NO;
 //    }else{
         //
-        
-        
         return YES;
 //    }
 }
 -(void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item{
     DLog(@"________%@",item.title);
-
 }
 - (void)selectedTab:(UIButton *)button{
     [SVProgressHUD dismiss];

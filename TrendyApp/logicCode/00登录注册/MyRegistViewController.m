@@ -38,27 +38,22 @@
     _mtableView =[[MYRHTableView alloc]initWithFrame:CGRectMake(0, kTopHeight, kScreenWidth, kScreenHeight-kTopHeight) style:UITableViewStylePlain];
     _mtableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.view addSubview:_mtableView];
-    
+   
     
     {
         //        UILabel*lbPrivacyProtocpol=[RHMethods ClableY:0 W:0 Height:13 font:13 superview:self.view withColor:rgb(102, 102, 102) text:kS(@"register", @"register_button_agree_policy")];
 //        UILabel*lbPrivacyProtocpol=[RHMethods ClableY:0 W:0 Height:13 font:13 superview:nil withColor:rgb(102, 102, 102) text:kS(@"register", @"register_button_agree_policy")];
         UILabel*lbPrivacyProtocpol=[RHMethods lableX:31 Y:12-10 W:kScreenWidth-60 Height:13+20 font:13 superview:nil withColor:rgb(102,102,102) text:kS(@"register", @"register_button_agree_policy")];
         [_mtableView.defaultSection.noReUseViewArray addObject:lbPrivacyProtocpol];
-        
 //        lbPrivacyProtocpol.frameBY=20;
-        
-        
         NSAttributedString *attrStr = [[NSAttributedString alloc]initWithData:[kS(@"register", @"register_button_agree_policy") dataUsingEncoding:NSUnicodeStringEncoding] options:@{NSDocumentTypeDocumentAttribute:NSHTMLTextDocumentType}
                                                            documentAttributes:nil error:nil];
         lbPrivacyProtocpol.numberOfLines = 0;
         [lbPrivacyProtocpol setAttributedText:attrStr];
-        
         [lbPrivacyProtocpol setColor:rgb(13,107,154) contenttext:kS(@"register",@"register_button_policy")];
         [lbPrivacyProtocpol addViewTarget:self select:@selector(seeProlicy:)];
         //        [lbPrivacyProtocpol setColor:rgb(13,107,154) contenttext:@"《隱私條款》"];
     }
-    
     NSArray*arraytitle=@[kS(@"register", @"register_hint_pls_input_phone_number"),kS(@"register", @"register_hint_pls_input_verify_code"),kS(@"register", @"register_hint_pls_input_pwd"),];
     if([self.userInfo isEqualToString:@"绑定手机"]){
              arraytitle=@[kS(@"register", @"register_hint_pls_input_phone_number"),kS(@"register", @"register_hint_pls_input_verify_code")];
@@ -86,9 +81,9 @@
         }
     }
     if([self.userInfo isEqualToString:@"绑定手机"]){
-              WSSizeButton*btnOK=[RHMethods buttonWithframe:CGRectMake(30, 30, kScreenWidth-60, 44) backgroundColor:rgb(13, 107, 154) text:kS(@"bind_mail", @"binding_mail_button_binding_now") font:16 textColor:rgb(255, 255, 255) radius:5 superview:nil];
-                     [_mtableView.defaultSection.noReUseViewArray addObject:btnOK];
-                     [btnOK addViewTarget:self select:@selector(submintButtonClicked)];
+        WSSizeButton*btnOK=[RHMethods buttonWithframe:CGRectMake(30, 30, kScreenWidth-60, 44) backgroundColor:rgb(13, 107, 154) text:kS(@"bind_mail", @"binding_mail_button_binding_now") font:16 textColor:rgb(255, 255, 255) radius:5 superview:nil];
+        [_mtableView.defaultSection.noReUseViewArray addObject:btnOK];
+        [btnOK addViewTarget:self select:@selector(submintButtonClicked)];
 
         self.textfieldPhoneNumber.placeholder=kS(@"register", @"register_hint_pls_input_mail");
     }else{
@@ -112,8 +107,20 @@
         btnSwich.hidden=YES;
         btnSwich.alpha=0;
         //        }
-
     }
+    UIView *footerView =[[UIView alloc]initWithFrame:CGRectMake(0, 0,SCREEN_WIDTH, WScale(120))];
+    footerView.backgroundColor =CLEARCOLOR;
+    UILabel *titleLab =[UILabel labelWithText:kS(@"register", @"registration_process") font:DR_FONT(13) textColor:BLACKCOLOR backGroundColor:CLEARCOLOR textAlignment:0 superView:footerView];
+    titleLab.frame =CGRectMake(WScale(30), WScale(0), WScale(200), WScale(13));
+    UILabel *firstLab =[UILabel labelWithText:kS(@"register", @"register_hint_pls_input_mail") font:DR_FONT(12) textColor:RGBHex(0X999999) backGroundColor:CLEARCOLOR textAlignment:0 superView:footerView];
+    firstLab.frame =CGRectMake(WScale(30), WScale(22), WScale(200), WScale(13));
+    UILabel *secondLab =[UILabel labelWithText:kS(@"register", @"register_hint_pls_input_mail") font:DR_FONT(12) textColor:RGBHex(0X999999) backGroundColor:CLEARCOLOR textAlignment:0 superView:footerView];
+    secondLab.frame =CGRectMake(WScale(30), WScale(44), WScale(200), WScale(13));
+    UILabel *thirdLab =[UILabel labelWithText:kS(@"register", @"register_hint_pls_input_mail") font:DR_FONT(12) textColor:RGBHex(0X999999) backGroundColor:CLEARCOLOR textAlignment:0 superView:footerView];
+    thirdLab.frame =CGRectMake(WScale(30), WScale(66), WScale(200), WScale(13));
+    UILabel *fourthLab =[UILabel labelWithText:kS(@"register", @"register_hint_pls_input_mail") font:DR_FONT(12) textColor:RGBHex(0X999999) backGroundColor:CLEARCOLOR textAlignment:0 superView:footerView];
+    fourthLab.frame =CGRectMake(WScale(30), WScale(88), WScale(200), WScale(13));
+    _mtableView.tableFooterView =footerView;
     [_mtableView reloadData];
 //    {
 ////        UILabel*lbPrivacyProtocpol=[RHMethods ClableY:0 W:0 Height:13 font:13 superview:self.view withColor:rgb(102, 102, 102) text:kS(@"register", @"register_button_agree_policy")];
@@ -131,6 +138,7 @@
 //        [lbPrivacyProtocpol addViewTarget:self select:@selector(seeProlicy:)];
 ////        [lbPrivacyProtocpol setColor:rgb(13,107,154) contenttext:@"《隱私條款》"];
 //    }
+    
 }
 -(void)seeProlicy:(UIButton*)btn{
       __weak __typeof(self) weakSelf = self;

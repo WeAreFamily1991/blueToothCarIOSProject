@@ -112,7 +112,7 @@ space = par;\
 #define fontSmallTitle Font(10)
 #define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue &0xFF00) >>8))/255.0 blue:((float)(rgbValue &0xFF))/255.0 alpha:1.0]// ///UIColorFromRGB(0xff822c)
 #define rgbHexColor(hexColor) [UIColor colorWithHexString:hexColor]
-
+#define RGBHex(s)               [UIColor colorWithRed:(((s&0xFF0000) >> 16))/255.0 green:(((s&0xFF00) >>8))/255.0 blue:((s&0xFF))/255.0 alpha:1.0]
 #define CN 1
 #define UI_language(cn,us) CN?cn:us
 
@@ -167,6 +167,52 @@ if ([[kUtility_Login userToken] notEmptyOrNull]) {[dictparam setValue:[kUtility_
 } if ([[kUtility_Login userId] notEmptyOrNull]){[dictparam setValue:[kUtility_Login userId] forKey:@"uid"];}\
 [dictparam setValue:kLanguageService.appLanguage forKey:@"language"];
 
+//rockding add
+#define kScreenWidth            [UIScreen mainScreen].bounds.size.width
+#define SCREEN_WIDTH            [UIScreen mainScreen].bounds.size.width
+#define SCREEN_HEIGHT           [UIScreen mainScreen].bounds.size.height
+#define HScale(v) v / 667. * SCREEN_HEIGHT //高度比
+#define WScale(w) w / 375. * SCREEN_WIDTH //宽度比
+#define ScreenBounds [[UIScreen mainScreen] bounds]
+#define DRTopHeight (DRStatusBarHeight + 44)
+#define DRTabBarHeight self.tabBarController.tabBar.frame.size.height
+#define DRStatusBarHeight UIApplication.sharedApplication.statusBarFrame.size.height
+#define FIT_WIDTH [UIScreen mainScreen].bounds.size.width/375
+#define SafeAreaBottomHeight ((IS_IPHONE_X==YES || IS_IPHONE_Xr ==YES || IS_IPHONE_Xs== YES || IS_IPHONE_Xs_Max== YES || IsiPhone11== YES|| IsiPhone11Pro== YES|| IsiPhone11ProMax== YES) ? 34:0)
+#define kIPhoneXBottomHeight ((SCREEN_HEIGHT >= 812)?34:0) //iPhoneX底部留出34距离
+
+// 以 iPhone6 屏幕为标准，按比例计算宽度
+#define WidthScale(width) width/750.0*SCREEN_WIDTH
+
+// 字体
+#define kFontNameSize(fontNameSize)            [UIFont fontWithName:@"PingFang-SC-Medium" size:fontNameSize]
+#define DR_FONT(__fontsize__) [UIFont systemFontOfSize:__fontsize__]
+#define DR_BoldFONT(__fontsize__) [UIFont boldSystemFontOfSize:__fontsize__]
+#define FontWithWeight(size, fontWeight)    [UIFont systemFontOfSize:FontSize(size) weight:fontWeight]
+
+// 是否是 iPhoneX 及以上机型（以状态栏的高度来判断）
+#define IsiPhoneXOrLater CGRectGetHeight([UIApplication sharedApplication].statusBarFrame) >= 44.0
+
+// 根据 RGB 生成 UIColor 对象
+#define KTextColor              RGB(67, 67, 67)
+#define kColor_TitleColor         kColor(@"#666666")//标题颜色
+#define kColor_ButonCornerColor   kColor(@"#D9D9D9")
+#define kColor_bgHeaderViewColor  kColor(@"#E2E2E2")
+#define kColor(hexStr)            [AppMethods colorWithHexString:hexStr]
+#define BACKGROUNDCOLOR         RGBHex(0XF4F4F4)
+#define RGB(R, G, B)            [UIColor colorWithRed:R/255.0 green:G/255.0 blue:B/255.0 alpha:1.0]
+#define RGBA(R, G, B, A)        [UIColor colorWithRed:R/255.0 green:G/255.0 blue:B/255.0 alpha:A]
+#define RGBHex(s)               [UIColor colorWithRed:(((s&0xFF0000) >> 16))/255.0 green:(((s&0xFF00) >>8))/255.0 blue:((s&0xFF))/255.0 alpha:1.0]
+#define RGBAHex(s, A)           [UIColor colorWithRed:(((s&0xFF0000) >> 16))/255.0 green:(((s&0xFF00) >>8))/255.0 blue:((s&0xFF))/255.0 alpha:A]
+#define JDColor(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+#define REDCOLOR   RGBHex(0XF03A58)
+#define LINECOLOR   RGBHex(0XE5E5E5)
+
+#define WHITECOLOR [UIColor whiteColor]
+#define BLACKCOLOR RGBHex(0X222222)
+#define CLEARCOLOR [UIColor clearColor]
+
+//add end
 
 
 
