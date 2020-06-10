@@ -16,6 +16,7 @@
 #import "AddInsuranceViewController.h"
 @interface ApplicationForReservationViewController ()
 {
+    
 }
 @property(nonatomic,strong)MYRHTableView*mtableView;
 @property(nonatomic,strong)NSMutableDictionary *dicAll;

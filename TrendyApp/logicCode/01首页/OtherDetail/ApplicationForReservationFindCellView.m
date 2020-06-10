@@ -210,9 +210,6 @@
 //        }];
         _swich1.isOn=YES;
 //        _swich2.isOn=YES;
-        
-        
-        
         //监听选择时间变化
         [kUtilitySelectTime addEventWithObj:self actionTypeArray:@[@"updateHomeDataSelect"] reUseID:NSStringFromClass([self class]) WithBlcok:^(MYBaseService *obj) {
             if ([weakSelf.type isEqualToString:@"租车首页"]) {
@@ -289,30 +286,21 @@
                     //同时选中还车地点
                     [weakSelf setAddValue:[data toBeMutableObj] forKey:@"selectAddressE_on"];
                 }
-                
-                
-                
-                
                 [weakSelf upDataMe];
                 [weakSelf updateData];
                 [weakSelf dispachEvent];
             }];
         }
-       
     }else{
         [UTILITY.currentViewController pushController:[SearchVehicleLocationViewController class] withInfo:nil withTitle:kST(@"useCarAddress") withOther:nil withAllBlock:^(id data, int status, NSString *msg) {
             [weakSelf setAddValue:data forKey:@"selectAddressS"];
-            
             if ([weakSelf.type isEqualToString:@"租车首页"]) {
-                
                 //选择上门 同时是在租车首页的情况下 还车上门地址和 取车上门地址同步，
                    //取车城市为空 或者还车城市与取车城市相同的时候
                 if ( ![[kUtility_Location.userCityReturn ojsk:@"name"] notEmptyOrNull]||[[kUtility_Location.userCityReturn ojsk:@"name"] isEqualToString:[kUtility_Location.userCityTake ojsk:@"name"]]) {
                     [weakSelf setAddValue:[data toBeMutableObj] forKey:@"selectAddressE"];
                 }
-                
             }
-            
             //同时选中还车地点
 //            [weakSelf setAddValue:[data toBeMutableObj] forKey:@"selectAddressE"];
             [weakSelf upDataMe];
@@ -321,7 +309,6 @@
         }];
     }
 }
-
 //选择到达地址
 -(void)selectEAddress{
     __weak typeof(self) weakSelf=self;
@@ -365,7 +352,6 @@
             NSDictionary *dt_S=[selectData ojk:@"selectStartTime"];
             NSDictionary *dt_E=[selectData ojk:@"selectEndTime"];
             [dicTemp setObject:[NSString stringWithFormat:@"%@ %@:00,%@ %@:00",[dt_S ojsk:@"formatStr"],[dt_S ojsk:@"timeStr"],[dt_E ojsk:@"formatStr"],[dt_E ojsk:@"timeStr"]] forKey:@"between_time"];
-            
         }
         NSMutableDictionary *dicAddressS=[self getAddValueForKey:@"dicAddressS"];
         if (dicAddressS && [[dicAddressS allKeys] count]>0) {
@@ -441,10 +427,8 @@
     NSDictionary *dt_S=[selectData ojk:@"selectStartTime"];
     NSDictionary *dt_E=[selectData ojk:@"selectEndTime"];
     [dicTemp setObject:[NSString stringWithFormat:@"%@ %@:00,%@ %@:00",[dt_S ojsk:@"formatStr"],[dt_S ojsk:@"timeStr"],[dt_E ojsk:@"formatStr"],[dt_E ojsk:@"timeStr"]] forKey:@"between_time"];
-    
     aBlock?aBlock(dicTemp,200,nil):nil;
 }
-
 -(void)dispachEvent{
     self.updataMyBlock?self.updataMyBlock(nil,200,nil):nil;
 }

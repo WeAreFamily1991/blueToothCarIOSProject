@@ -133,6 +133,7 @@
         
         UIImageView*imgVMyIcon=[RHMethods imageviewWithFrame:CGRectMake(20, 0, 60, 60) defaultimage:@"photo" supView:viewHeader];
         imgVMyIcon.frameBY=27;
+       
         [imgVMyIcon beRound];
         [imgVMyIcon addViewClickBlock:^(UIView *view) { 
              [weakSelf pushController:[PersonalHomeViewController class] withInfo:weakSelf.data withTitle:@" " withOther:@"mine"];
@@ -155,7 +156,7 @@
             
         }];
         
-        UILabel*lbName=[RHMethods lableX:imgVMyIcon.frameXW+16 Y:imgVMyIcon.frameY+10 W:kScreenWidth-120-imgVMyIcon.frameXW-16 Height:20 font:20 superview:viewHeader withColor:rgb(255, 255, 255) text:@"--"];
+        UILabel*lbName=[RHMethods lableX:imgVMyIcon.frameXW+16 Y:imgVMyIcon.frameY+10 W:kScreenWidth-imgVMyIcon.frameXW-16 Height:20 font:20 superview:viewHeader withColor:rgb(255, 255, 255) text:@"--"];
         UILabel*lbLable=[RHMethods lableX:lbName.frameX Y:lbName.frameYH+9 W:0 Height:15 font:10 superview:viewHeader withColor:rgb(255, 255, 255) text:kS(@"myIndexPage", @"rental_master")];
         lbLable.textAlignment=NSTextAlignmentCenter;
         lbLable.frameWidth=lbLable.frameWidth+6*2;
@@ -164,6 +165,7 @@
         UILabel*lbService=[RHMethods lableX:0 Y:0 W:0 Height:30 font:13 superview:viewHeader withColor:rgb(255, 255, 255) text:[NSString stringWithFormat:@"   %@ >      ",kS(@"myIndexPage", @"vehicle_owner_service")]];
         [lbService beRound];
         lbService.frameBY=42;
+        lbService.hidden =YES;
         lbService.frameX=kScreenWidth-85;
         lbService.backgroundColor=RGBACOLOR(255, 255, 255, 0.1);
         [lbService addViewClickBlock:^(UIView *view) {
@@ -171,6 +173,7 @@
         }];
         UILabel*lbTip=[RHMethods lableX:lbLable.frameX Y:0 W:0 Height:10 font:10 superview:viewHeader withColor:rgbwhiteColor text:kS(@"myIndexPage", @"EnjoyMoreBenefitsAfterLogin")];
         lbTip.centerY=lbLable.centerY;
+        lbTip.hidden =YES;
         [lbName addViewClickBlock:^(UIView *view) {
             [kUtility_Login mustLogInWithBlock:^(id data, int status, NSString *msg) {
                 

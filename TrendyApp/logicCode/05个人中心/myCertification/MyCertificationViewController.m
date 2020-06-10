@@ -203,16 +203,16 @@
                                  @"placeholder":kS(@"IdentityAuthentication", @"PleaseUpload"),
                                  @"isMust":@"1",
                                  },
-//                             @{
-//                                 @"classStr":@"FCSelectCellView",
-////                                 @"name":@"本人信用卡",
-//                                 @"name":kS(@"IdentityAuthentication", @"UploadCreditCard"),
-//                                 @"requestkey":@"card_path",
-//                                 @"keyArray":@[@"card_path",],
-////                                 @"placeholder":@"未選擇",
-//                                 @"placeholder":kS(@"IdentityAuthentication", @"PleaseUpload"),
-//                                 @"isMust":@"1",
-//                                 },
+                             @{
+                                 @"classStr":@"FCSelectCellView",
+//                                 @"name":@"本人信用卡",
+                                 @"name":kS(@"IdentityAuthentication", @"UploadCreditCard"),
+                                 @"requestkey":@"card_path",
+                                 @"keyArray":@[@"card_path",],
+//                                 @"placeholder":@"未選擇",
+                                 @"placeholder":kS(@"IdentityAuthentication", @"PleaseUpload"),
+                                 @"isMust":@"1",
+                                 }
                              
                              
                              ];
@@ -283,7 +283,17 @@
 //                                 @"placeholder":@"未選擇",
                                  @"placeholder":kS(@"IdentityAuthentication", @"PleaseUpload"),
                                  @"isMust":@"1",
-                                 },];
+                                 },
+                             @{
+                                 @"classStr":@"FCSelectCellView",
+                                 //                                 @"name":@"護照",
+                                 @"name":kS(@"IdentityAuthentication", @"Passport"),
+                                 @"requestkey":@"endTime",
+                                 @"keyArray":@[@"passport",],
+                                 //                                 @"placeholder":@"未選擇",
+                                 @"placeholder":kS(@"IdentityAuthentication", @"PleaseUpload"),
+                                 @"isMust":@"1",
+                             }];
         
         arraytitle=[arraytitle toBeMutableObj];
         [_mtableView.defaultSection.noReUseViewArray removeAllObjects];
@@ -354,105 +364,119 @@
     NSMutableDictionary*mdataDic=viewCell.data;
     NSDictionary*dic=nil;
     //日本驾证
-    if ([[mdataDic ojsk:@"requestkey"] isEqualToString:@"a_driving_front__driving_behind"]) {
-        dic=@{
-              @"title":kS(@"IdentityAuthentication", @"DriversLicense"),
-//              @"describe":@"請上傳您本人的日本駕駛證,請確保圖片清晰,四角完整！",
-              @"describe":kS(@"IdentityAuthentication", @"PleaseUploadJapaneseDriversLicense"),
-              @"is_auth":_is_auth,
-              @"list":@[
-                      @{
-                          @"requestkey":@"driving_front",
-//                          @"placeholder":@"上傳駕證主頁",
-                          @"placeholder":kS(@"IdentityAuthentication", @"UploadDrivingLicenseHomePage"),
-                          },
-                      @{
-                          @"requestkey":@"driving_behind",
-//                          @"placeholder":@"上傳駕證副頁",
-                          @"placeholder":kS(@"IdentityAuthentication", @"UploadDrivingLicenseSubpage"),
-                          },
-                      ],
-              };
-//        本人信用卡
-    }else    if ([[mdataDic ojsk:@"requestkey"] isEqualToString:@"card_path"]) {
-        dic=@{
-              @"title":kS(@"IdentityAuthentication", @"PersonalCreditCard"),
-//              @"describe":@"請上傳您本人的信用卡,請確保圖片清晰,四角完整！",
-              @"describe":kS(@"IdentityAuthentication", @"PleaseUploadYourCreditCard"),
-              @"is_auth":_is_auth,
-              @"list":@[
-                      @{
-                          @"requestkey":[mdataDic ojsk:@"requestkey"],
-//                          @"placeholder":@"上傳信用卡",
-                          @"placeholder":kS(@"IdentityAuthentication", @"UploadCreditCard"),
-                          },
-                      ],
-              };
-//您所在的國家駕駛證
-    }else    if ([[mdataDic ojsk:@"requestkey"] isEqualToString:@"b_driving_front__driving_behind"]) {
-        dic=@{
-//              @"title":@"駕證",
-              @"title":kS(@"IdentityAuthentication", @"DriversLicense"),
-//              @"describe":@"請上傳您所在國家本人的駕駛證,請確保圖片清晰,四角完整！",
-              @"describe":kS(@"IdentityAuthentication", @"PleaseUploadYourDriversLicenseCountry"),
-              @"is_auth":_is_auth,
-              @"list":@[
-                      @{
-                          @"requestkey":@"driving_front",
-                          //                          @"placeholder":@"上傳駕證主頁",
-                          @"placeholder":kS(@"IdentityAuthentication", @"UploadDrivingLicenseHomePage"),
-                          },
-                      @{
-                          @"requestkey":@"driving_behind",
-                          //                          @"placeholder":@"上傳駕證副頁",
-                          @"placeholder":kS(@"IdentityAuthentication", @"UploadDrivingLicenseSubpage"),
-                          },
-                      ],
-              };
-        
-        //國際駕駛證
-    }else    if ([[mdataDic ojsk:@"requestkey"] isEqualToString:@"inter_driving_front__inter_driving_behind"]) {
-        dic=@{
-//              @"title":@"國際駕證",
-              @"title":kS(@"IdentityAuthentication", @"InternationalDrivingLicense"),
-//              @"describe":@"請上傳您本人的國際駕證,請確保圖片清晰,四角完整！",
-              @"describe":kS(@"IdentityAuthentication", @"PleaseUploadYourInternational"),
-              @"is_auth":_is_auth,
-              @"list":@[
-                      @{
-                          @"requestkey":@"inter_driving_front",
-//                          @"placeholder":@"上傳國際駕證主頁",
-//                          @"placeholder":@"上傳國際駕證主頁",
-                          @"placeholder":kS(@"IdentityAuthentication", @"UploadInternationalDrivingLicenseHomePage"),
-                          },
-                      @{
-                          @"requestkey":@"inter_driving_behind",
-//                          @"placeholder":@"上傳國際駕證副頁",
-                          @"placeholder":kS(@"IdentityAuthentication", @"UploadInternationalDLSupplementaryPage"),
-                          },
-                      ],
-              };
-    }else    if ([[mdataDic ojsk:@"requestkey"] isEqualToString:@"passport"]) {
-        dic=@{
-//              @"title":@"護照",
-              @"title":kS(@"IdentityAuthentication", @"Passport"),
-//              @"describe":@"請上傳您本人的護照,請確保圖片清晰,四角完整！",
-              @"describe":kS(@"IdentityAuthentication", @"PleaseUploadYourPassport"),
-              @"is_auth":_is_auth,
-              @"list":@[
-                      @{
-                          @"requestkey":@"passport",
-//                          @"placeholder":@"上傳國際駕證主頁",
-                          @"placeholder":kS(@"IdentityAuthentication", @"UploadPassport"),
-                          },
-                      ],
-              };
+    if (![[mdataDic ojsk:@"requestkey"] isEqualToString:@"endTime"]) {
+        if ([[mdataDic ojsk:@"requestkey"] isEqualToString:@"a_driving_front__driving_behind"]) {
+            dic=@{
+                @"title":kS(@"IdentityAuthentication", @"DriversLicense"),
+                //              @"describe":@"請上傳您本人的日本駕駛證,請確保圖片清晰,四角完整！",
+                @"describe":kS(@"IdentityAuthentication", @"PleaseUploadJapaneseDriversLicense"),
+                @"is_auth":_is_auth,
+                @"list":@[
+                        @{
+                            @"requestkey":@"driving_front",
+                            //                          @"placeholder":@"上傳駕證主頁",
+                            @"placeholder":kS(@"IdentityAuthentication", @"UploadDrivingLicenseHomePage"),
+                        },
+                        @{
+                            @"requestkey":@"driving_behind",
+                            //                          @"placeholder":@"上傳駕證副頁",
+                            @"placeholder":kS(@"IdentityAuthentication", @"UploadDrivingLicenseSubpage"),
+                        },
+                ],
+            };
+            //        本人信用卡
+        }else    if ([[mdataDic ojsk:@"requestkey"] isEqualToString:@"card_path"]) {
+            dic=@{
+                @"title":kS(@"IdentityAuthentication", @"PersonalCreditCard"),
+                //              @"describe":@"請上傳您本人的信用卡,請確保圖片清晰,四角完整！",
+                @"describe":kS(@"IdentityAuthentication", @"PleaseUploadYourCreditCard"),
+                @"is_auth":_is_auth,
+                @"list":@[
+                        @{
+                            @"requestkey":[mdataDic ojsk:@"requestkey"],
+                            //                          @"placeholder":@"上傳信用卡",
+                            @"placeholder":kS(@"IdentityAuthentication", @"UploadCreditCard"),
+                        },
+                ],
+            };
+            //您所在的國家駕駛證
+        }else    if ([[mdataDic ojsk:@"requestkey"] isEqualToString:@"b_driving_front__driving_behind"]) {
+            dic=@{
+                //              @"title":@"駕證",
+                @"title":kS(@"IdentityAuthentication", @"DriversLicense"),
+                //              @"describe":@"請上傳您所在國家本人的駕駛證,請確保圖片清晰,四角完整！",
+                @"describe":kS(@"IdentityAuthentication", @"PleaseUploadYourDriversLicenseCountry"),
+                @"is_auth":_is_auth,
+                @"list":@[
+                        @{
+                            @"requestkey":@"driving_front",
+                            //                          @"placeholder":@"上傳駕證主頁",
+                            @"placeholder":kS(@"IdentityAuthentication", @"UploadDrivingLicenseHomePage"),
+                        },
+                        @{
+                            @"requestkey":@"driving_behind",
+                            //                          @"placeholder":@"上傳駕證副頁",
+                            @"placeholder":kS(@"IdentityAuthentication", @"UploadDrivingLicenseSubpage"),
+                        },
+                ],
+            };
+            
+            //國際駕駛證
+        }else    if ([[mdataDic ojsk:@"requestkey"] isEqualToString:@"inter_driving_front__inter_driving_behind"]) {
+            dic=@{
+                //              @"title":@"國際駕證",
+                @"title":kS(@"IdentityAuthentication", @"InternationalDrivingLicense"),
+                //              @"describe":@"請上傳您本人的國際駕證,請確保圖片清晰,四角完整！",
+                @"describe":kS(@"IdentityAuthentication", @"PleaseUploadYourInternational"),
+                @"is_auth":_is_auth,
+                @"list":@[
+                        @{
+                            @"requestkey":@"inter_driving_front",
+                            //                          @"placeholder":@"上傳國際駕證主頁",
+                            //                          @"placeholder":@"上傳國際駕證主頁",
+                            @"placeholder":kS(@"IdentityAuthentication", @"UploadInternationalDrivingLicenseHomePage"),
+                        },
+                        @{
+                            @"requestkey":@"inter_driving_behind",
+                            //                          @"placeholder":@"上傳國際駕證副頁",
+                            @"placeholder":kS(@"IdentityAuthentication", @"UploadInternationalDLSupplementaryPage"),
+                        },
+                ],
+            };
+        }else    if ([[mdataDic ojsk:@"requestkey"] isEqualToString:@"passport"]) {
+            dic=@{
+                //              @"title":@"護照",
+                @"title":kS(@"IdentityAuthentication", @"Passport"),
+                //              @"describe":@"請上傳您本人的護照,請確保圖片清晰,四角完整！",
+                @"describe":kS(@"IdentityAuthentication", @"PleaseUploadYourPassport"),
+                @"is_auth":_is_auth,
+                @"list":@[
+                        @{
+                            @"requestkey":@"passport",
+                            //                          @"placeholder":@"上傳國際駕證主頁",
+                            @"placeholder":kS(@"IdentityAuthentication", @"UploadPassport"),
+                        },
+                ],
+            };
+        }
+        __weak __typeof(self) weakSelf = self;
+         [self pushController:[VertificationPhotoUpdataViewController class] withInfo:[weakSelf getAddValueForKey:[mdataDic ojsk:@"requestkey"]] withTitle:[mdataDic ojsk:@"name"] withOther:dic withAllBlock:^(id data, int status, NSString *msg) {
+             [weakSelf setAddValue:data forKey:[mdataDic ojsk:@"requestkey"]];
+             viewCell.defaultTextfield.text=kS(@"IdentityAuthentication", @"Uploaded");
+         }];
     }
-      __weak __typeof(self) weakSelf = self;
-    [self pushController:[VertificationPhotoUpdataViewController class] withInfo:[weakSelf getAddValueForKey:[mdataDic ojsk:@"requestkey"]] withTitle:[mdataDic ojsk:@"name"] withOther:dic withAllBlock:^(id data, int status, NSString *msg) {
-        [weakSelf setAddValue:data forKey:[mdataDic ojsk:@"requestkey"]];
-        viewCell.defaultTextfield.text=kS(@"IdentityAuthentication", @"Uploaded");
-    }];
+    else
+    {
+        NSDate *now = [NSDate date];
+        NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
+        fmt.dateFormat = @"yyyy-MM-dd";
+        NSString *nowStr = [fmt stringFromDate:now];
+           
+        [CGXPickerView showDatePickerWithTitle:@"截止时间" DateType:UIDatePickerModeDate DefaultSelValue:nowStr MinDateStr:nowStr MaxDateStr:@"2099-01-01" IsAutoSelect:NO Manager:nil ResultBlock:^(NSString *selectValue) {
+            
+        }];
+    }
+ 
     
     
 }

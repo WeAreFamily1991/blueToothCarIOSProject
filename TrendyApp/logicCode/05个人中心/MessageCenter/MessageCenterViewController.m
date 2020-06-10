@@ -38,7 +38,7 @@
     [super viewWillAppear:animated];
       __weak __typeof(self) weakSelf = self;
     [kUserCenterService ucenter_getnoticesindex:@{} withBlock:^(id data, int status, NSString *msg) {
-        weakSelf.messageview1.valueStr=[data ojsk:@"ordernum"];
+//        weakSelf.messageview1.valueStr=[data ojsk:@"ordernum"];
         weakSelf.messageview2.valueStr=[data ojsk:@"systemnum"];
 //        weakSelf.messageview1.valueStr=@"122";
 //        weakSelf.messageview2.valueStr=@"133";
@@ -49,14 +49,15 @@
     UIView*viewContentHeader=[UIView viewWithFrame:CGRectMake(0, kTopHeight, kScreenWidth, 10) backgroundcolor:nil superView:self.view];
     {
         
-        NSArray*arrayArray=@[@{
-                                 @"classStr":@"MessageCenterHeaderCellView",
-                                 @"image":@"noticei0",
-//                                 @"title":kST(@"orderMessage"),
-                                 @"title":kS(@"messageCenter", @"orderMessage"),
-                                 @"messageType":@"order",
-                                 @"frameY":@"10",
-                                 },
+        NSArray*arrayArray=@[
+//        @{
+//                                 @"classStr":@"MessageCenterHeaderCellView",
+//                                 @"image":@"noticei0",
+////                                 @"title":kST(@"orderMessage"),
+//                                 @"title":kS(@"messageCenter", @"orderMessage"),
+//                                 @"messageType":@"order",
+//                                 @"frameY":@"10",
+//                                 },
                              @{
                                  @"classStr":@"MessageCenterHeaderCellView",
                                  @"image":@"noticei2",
@@ -157,9 +158,10 @@
 -(void)messageTypeClick:(UIButton*)btn{
     
     NSString*messageType=[btn.data ojsk:@"messageType"];
-    if ([messageType isEqualToString:@"order"]) {
-        [self pushController:[OrderMessageViewController class] withInfo:nil withTitle:kST(@"orderMessage")];
-    }else if([messageType isEqualToString:@"system"]){
+//    if ([messageType isEqualToString:@"order"]) {
+//        [self pushController:[OrderMessageViewController class] withInfo:nil withTitle:kST(@"orderMessage")];
+//    }else
+        if([messageType isEqualToString:@"system"]){
         
         [self pushController:[SystemMessageViewController class] withInfo:nil withTitle:kST(@"systemMessage")];
     }

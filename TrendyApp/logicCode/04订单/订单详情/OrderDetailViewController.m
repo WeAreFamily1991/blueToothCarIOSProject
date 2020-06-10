@@ -269,8 +269,6 @@
                                          },
                                      ] toBeMutableObj
                                    ];
-        
-        
         UIView*contentListView=[self loadRightListViewWithArray:[arraytitle toBeMutableObj]];
         contentListView.frameY=lbName.frameYH+13;
         [viewContent addSubview:contentListView];
@@ -285,7 +283,6 @@
         NSMutableArray*numbersArray=[NSMutableArray new];
 //        NSMutableArray*priceArray=[NSMutableArray new];
         float price=0.0;
-        
         for (NSMutableDictionary*mdic in [self.data ojk:@"appendarr"]) {
             if ([[mdic ojk:@"name"] notEmptyOrNull]) {
                 [nameArray addObject:[mdic ojk:@"name"]];
@@ -295,10 +292,8 @@
                 price+=[mdic ojsk:@"price"].noformPriceStr.floatValue;
 //                [priceArray addObject:[mdic ojk:@"price"]];
             }
-            
         }
 //        NSMutableDictionary*mdic=[[self.data ojk:@"appendarr"] firstObject];
-        
         NSString*strPrice=[NSString stringWithFormat:@"%.0f",price];
         NSMutableArray*arraytitle=[
                                    @[
@@ -317,15 +312,11 @@
                                          },
                                      ] toBeMutableObj
                                    ];
-
         UIView*contentListView=[self loadRightListViewWithArray:[arraytitle toBeMutableObj]];
         contentListView.frameY=lbName.frameYH+5;
         [viewContent addSubview:contentListView];
         viewContent.frameHeight=contentListView.frameYH+5;
     }
-
-    
-    
 //    //訂單信息
 //    {
 //        UIView*viewContent=[UIView viewWithFrame:CGRectMake(0, 10, kScreenWidth, 100) backgroundcolor:rgb(255, 255, 255) superView:nil];
@@ -346,7 +337,6 @@
 //            }
 //        }
 //    }
-    
     //訂單信息
    {
         UIView*viewContent=[UIView viewWithFrame:CGRectMake(0, 10, kScreenWidth, 100) backgroundcolor:rgb(255, 255, 255) superView:nil];
@@ -376,8 +366,6 @@
                                          },
                                      ] toBeMutableObj
                                    ];
-        
-        
         UIView*contentListView=[self loadLeftListViewWithArray:[arraytitle toBeMutableObj]];
         contentListView.frameY=lbName.frameYH+10;
         [viewContent addSubview:contentListView];

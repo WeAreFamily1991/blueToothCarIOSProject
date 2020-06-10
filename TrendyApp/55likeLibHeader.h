@@ -30,6 +30,7 @@
 #import "OrderService.h"
 #import "UIButton+NZCustom.h"
 #import "UILabel+Custom.h"
+#import "CGXPickerView.h"
 #endif
 
 

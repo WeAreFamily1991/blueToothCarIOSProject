@@ -8,6 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		18F0E1841CEB41C3EC92513C /* libPods-TrendyApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 102A40A36E43330E083F952A /* libPods-TrendyApp.a */; };
+		3568A9B8249080C900D7BAC8 /* DRIDCardVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3568A9B6249080C800D7BAC8 /* DRIDCardVC.m */; };
+		3568A9B9249080C900D7BAC8 /* DRIDCardVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3568A9B7249080C800D7BAC8 /* DRIDCardVC.xib */; };
+		3573ECCE248A1D700078D1EA /* CGXPickerViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573ECBF248A1D700078D1EA /* CGXPickerViewManager.m */; };
+		3573ECCF248A1D700078D1EA /* NSDate+CGXPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573ECC4248A1D700078D1EA /* NSDate+CGXPicker.m */; };
+		3573ECD0248A1D700078D1EA /* CGXAddressPcikerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573ECC5248A1D700078D1EA /* CGXAddressPcikerView.m */; };
+		3573ECD1248A1D700078D1EA /* CGXPickerView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3573ECC6248A1D700078D1EA /* CGXPickerView.bundle */; };
+		3573ECD2248A1D700078D1EA /* CGXDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573ECC8248A1D700078D1EA /* CGXDatePickerView.m */; };
+		3573ECD3248A1D700078D1EA /* CGXPickerUIBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573ECC9248A1D700078D1EA /* CGXPickerUIBaseView.m */; };
+		3573ECD4248A1D700078D1EA /* CGXAddressModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573ECCA248A1D700078D1EA /* CGXAddressModel.m */; };
+		3573ECD5248A1D700078D1EA /* CGXStringPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573ECCC248A1D700078D1EA /* CGXStringPickerView.m */; };
+		3573ECD6248A1D700078D1EA /* CGXPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3573ECCD248A1D700078D1EA /* CGXPickerView.m */; };
 		3577179E248525B100304891 /* UILabel+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 3577179A248525B000304891 /* UILabel+Custom.m */; };
 		3577179F248525B100304891 /* UIButton+NZCustom.m in Sources */ = {isa = PBXBuildFile; fileRef = 3577179D248525B100304891 /* UIButton+NZCustom.m */; };
 		357717A42485EC8B00304891 /* SubscribeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 357717A22485EC8B00304891 /* SubscribeVC.m */; };
@@ -551,6 +562,26 @@
 
 /* Begin PBXFileReference section */
 		102A40A36E43330E083F952A /* libPods-TrendyApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TrendyApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3568A9B5249080C800D7BAC8 /* DRIDCardVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DRIDCardVC.h; sourceTree = "<group>"; };
+		3568A9B6249080C800D7BAC8 /* DRIDCardVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DRIDCardVC.m; sourceTree = "<group>"; };
+		3568A9B7249080C800D7BAC8 /* DRIDCardVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DRIDCardVC.xib; sourceTree = "<group>"; };
+		3573ECBD248A1D700078D1EA /* CGXAddressPcikerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGXAddressPcikerView.h; sourceTree = "<group>"; };
+		3573ECBE248A1D700078D1EA /* CGXDatePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGXDatePickerView.h; sourceTree = "<group>"; };
+		3573ECBF248A1D700078D1EA /* CGXPickerViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGXPickerViewManager.m; sourceTree = "<group>"; };
+		3573ECC0248A1D700078D1EA /* CGXAddressModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGXAddressModel.h; sourceTree = "<group>"; };
+		3573ECC1248A1D700078D1EA /* CGXPickerUIBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGXPickerUIBaseView.h; sourceTree = "<group>"; };
+		3573ECC2248A1D700078D1EA /* CGXPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGXPickerView.h; sourceTree = "<group>"; };
+		3573ECC3248A1D700078D1EA /* CGXStringPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGXStringPickerView.h; sourceTree = "<group>"; };
+		3573ECC4248A1D700078D1EA /* NSDate+CGXPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+CGXPicker.m"; sourceTree = "<group>"; };
+		3573ECC5248A1D700078D1EA /* CGXAddressPcikerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGXAddressPcikerView.m; sourceTree = "<group>"; };
+		3573ECC6248A1D700078D1EA /* CGXPickerView.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CGXPickerView.bundle; sourceTree = "<group>"; };
+		3573ECC7248A1D700078D1EA /* CGXPickerViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGXPickerViewManager.h; sourceTree = "<group>"; };
+		3573ECC8248A1D700078D1EA /* CGXDatePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGXDatePickerView.m; sourceTree = "<group>"; };
+		3573ECC9248A1D700078D1EA /* CGXPickerUIBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGXPickerUIBaseView.m; sourceTree = "<group>"; };
+		3573ECCA248A1D700078D1EA /* CGXAddressModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGXAddressModel.m; sourceTree = "<group>"; };
+		3573ECCB248A1D700078D1EA /* NSDate+CGXPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+CGXPicker.h"; sourceTree = "<group>"; };
+		3573ECCC248A1D700078D1EA /* CGXStringPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGXStringPickerView.m; sourceTree = "<group>"; };
+		3573ECCD248A1D700078D1EA /* CGXPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGXPickerView.m; sourceTree = "<group>"; };
 		3577179A248525B000304891 /* UILabel+Custom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Custom.m"; sourceTree = "<group>"; };
 		3577179B248525B000304891 /* UILabel+Custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Custom.h"; sourceTree = "<group>"; };
 		3577179C248525B100304891 /* UIButton+NZCustom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+NZCustom.h"; sourceTree = "<group>"; };
@@ -1631,6 +1662,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3568A9B42490809700D7BAC8 /* 绑定信用卡 */ = {
+			isa = PBXGroup;
+			children = (
+				3568A9B5249080C800D7BAC8 /* DRIDCardVC.h */,
+				3568A9B6249080C800D7BAC8 /* DRIDCardVC.m */,
+				3568A9B7249080C800D7BAC8 /* DRIDCardVC.xib */,
+			);
+			path = "绑定信用卡";
+			sourceTree = "<group>";
+		};
+		3573ECBC248A1D700078D1EA /* CGXPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				3573ECBD248A1D700078D1EA /* CGXAddressPcikerView.h */,
+				3573ECBE248A1D700078D1EA /* CGXDatePickerView.h */,
+				3573ECBF248A1D700078D1EA /* CGXPickerViewManager.m */,
+				3573ECC0248A1D700078D1EA /* CGXAddressModel.h */,
+				3573ECC1248A1D700078D1EA /* CGXPickerUIBaseView.h */,
+				3573ECC2248A1D700078D1EA /* CGXPickerView.h */,
+				3573ECC3248A1D700078D1EA /* CGXStringPickerView.h */,
+				3573ECC4248A1D700078D1EA /* NSDate+CGXPicker.m */,
+				3573ECC5248A1D700078D1EA /* CGXAddressPcikerView.m */,
+				3573ECC6248A1D700078D1EA /* CGXPickerView.bundle */,
+				3573ECC7248A1D700078D1EA /* CGXPickerViewManager.h */,
+				3573ECC8248A1D700078D1EA /* CGXDatePickerView.m */,
+				3573ECC9248A1D700078D1EA /* CGXPickerUIBaseView.m */,
+				3573ECCA248A1D700078D1EA /* CGXAddressModel.m */,
+				3573ECCB248A1D700078D1EA /* NSDate+CGXPicker.h */,
+				3573ECCC248A1D700078D1EA /* CGXStringPickerView.m */,
+				3573ECCD248A1D700078D1EA /* CGXPickerView.m */,
+			);
+			path = CGXPickerView;
+			sourceTree = "<group>";
+		};
 		357717A02485EC3800304891 /* 03预约 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1897,6 +1962,7 @@
 		D946E9DB221B925E001532E9 /* 55likeLib */ = {
 			isa = PBXGroup;
 			children = (
+				3573ECBC248A1D700078D1EA /* CGXPickerView */,
 				D925D490222657EB0017174C /* 表单提交 */,
 				D9C0B4E5221E8E0F008FB0AA /* ZXHInput */,
 				D946E9DC221B925E001532E9 /* UnifiedView */,
@@ -2930,6 +2996,7 @@
 				D93D56632255E527004746D2 /* OrderSearchViewController.m */,
 				D93D56652255F0A7004746D2 /* OrderSearchResultListViewController.h */,
 				D93D56662255F0A7004746D2 /* OrderSearchResultListViewController.m */,
+				3568A9B42490809700D7BAC8 /* 绑定信用卡 */,
 			);
 			path = "04订单";
 			sourceTree = "<group>";
@@ -3678,6 +3745,7 @@
 				D9FF56B8223A1A3D002DC7E5 /* PGDatePicker.bundle in Resources */,
 				D96951ED2227902700C65C47 /* MyVehicleCellView.xib in Resources */,
 				D96740522277FADA00E76830 /* Assets.xcassets in Resources */,
+				3568A9B9249080C900D7BAC8 /* DRIDCardVC.xib in Resources */,
 				D9F6DD1E221E4BC2005600A9 /* RentCarHomeCellView.xib in Resources */,
 				D946EBE6221B925E001532E9 /* star1.png in Resources */,
 				D9F6DD36221E8085005600A9 /* SelfHelpFindingCarHeaderView.xib in Resources */,
@@ -3707,6 +3775,7 @@
 				D9E95C59222E5C2A002316C0 /* ApplicationForReservationFindCellView.xib in Resources */,
 				D946EBE4221B925E001532E9 /* star0.png in Resources */,
 				D946EBDF221B925E001532E9 /* ImageBrowserChecked@2x.png in Resources */,
+				3573ECD1248A1D700078D1EA /* CGXPickerView.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3843,9 +3912,11 @@
 				D96952022227CEE100C65C47 /* OFCVehicleInspectionPhotoCellView.m in Sources */,
 				D967402B2277FADA00E76830 /* TPopView.m in Sources */,
 				D9EFD3772229207A0051C210 /* LanguageService.m in Sources */,
+				3573ECD4248A1D700078D1EA /* CGXAddressModel.m in Sources */,
 				D946EC2F221B925E001532E9 /* LFBaseViewController.m in Sources */,
 				D946EC8A221B925F001532E9 /* SDDataCache.m in Sources */,
 				D925D4BB222657EB0017174C /* FCLineCellView.m in Sources */,
+				3573ECD6248A1D700078D1EA /* CGXPickerView.m in Sources */,
 				D946EC14221B925E001532E9 /* ProductKeysView.m in Sources */,
 				D9DACAB5222CC74500D4B1B5 /* AboutUsViewController.m in Sources */,
 				D946EBF3221B925E001532E9 /* MJRefreshAutoNormalFooter.m in Sources */,
@@ -3897,6 +3968,7 @@
 				D9FF56C7223A55FF002DC7E5 /* FCSwichCellView.m in Sources */,
 				D9FC840422323E0600929FD6 /* TimeSelectPopView.m in Sources */,
 				D946EC66221B925F001532E9 /* SelectTitleViewController.m in Sources */,
+				3573ECD5248A1D700078D1EA /* CGXStringPickerView.m in Sources */,
 				D92BEB5522377C02001707B9 /* SelectCityViewController.m in Sources */,
 				D9B3D37122E5B61B00EA2105 /* PaymentOfAdditionalInsurance2ViewController.m in Sources */,
 				D925D4D5222661D90017174C /* FCOnlyTextCellView.m in Sources */,
@@ -3993,6 +4065,7 @@
 				D925D4D2222661920017174C /* FCWhiteLineCellView.m in Sources */,
 				D967405D2277FADA00E76830 /* EMVoiceConverter.mm in Sources */,
 				D946EC81221B925F001532E9 /* WDMember.m in Sources */,
+				3573ECCF248A1D700078D1EA /* NSDate+CGXPicker.m in Sources */,
 				D96740272277FADA00E76830 /* TPopCell.m in Sources */,
 				D946EC35221B925E001532E9 /* LFPhotoPreviewGifCell.m in Sources */,
 				D946EC6F221B925F001532E9 /* Base64.m in Sources */,
@@ -4018,6 +4091,7 @@
 				D946ECC9221BA864001532E9 /* RentCarHomeViewController.m in Sources */,
 				D9F7561D222F9CA600A1B95C /* BindingEmailBoxViewController.m in Sources */,
 				D96740162277FADA00E76830 /* TAddIndexView.m in Sources */,
+				3573ECD3248A1D700078D1EA /* CGXPickerUIBaseView.m in Sources */,
 				D9FF56B0223A1A3D002DC7E5 /* PGDatePickManager.m in Sources */,
 				D946EC3A221B925F001532E9 /* LFVideoEditManager.m in Sources */,
 				D946EC06221B925E001532E9 /* TextKeyboardView.m in Sources */,
@@ -4102,6 +4176,7 @@
 				D946EBF7221B925E001532E9 /* MJRefreshFooter.m in Sources */,
 				D9F6DD1A221E4B85005600A9 /* RentCarHomeCellView.m in Sources */,
 				D96740492277FADA00E76830 /* TGroupCommonCell.m in Sources */,
+				3573ECD2248A1D700078D1EA /* CGXDatePickerView.m in Sources */,
 				D9FD3B3C221CFF64008F7B68 /* TopAverageToggleView.m in Sources */,
 				D946EC6A221B925F001532E9 /* UIView+AutoLayout.m in Sources */,
 				D946EC38221B925E001532E9 /* LFPhotoPreviewVideoCell.m in Sources */,
@@ -4150,6 +4225,7 @@
 				D9FD3B3F221D039F008F7B68 /* OrderHomeCellView.m in Sources */,
 				D946EC8C221B925F001532E9 /* UIRefreshControl+AFNetworking.m in Sources */,
 				D946EC42221B925F001532E9 /* LFResultInfo.m in Sources */,
+				3568A9B8249080C900D7BAC8 /* DRIDCardVC.m in Sources */,
 				D9FF56C0223A1A3D002DC7E5 /* PGDatePicker+Year.m in Sources */,
 				D946EC07221B925E001532E9 /* MessageInterceptor.m in Sources */,
 				D967402E2277FADA00E76830 /* TMoreCell.m in Sources */,
@@ -4190,6 +4266,7 @@
 				357717A42485EC8B00304891 /* SubscribeVC.m in Sources */,
 				D946EBEF221B925E001532E9 /* MJRefreshBackStateFooter.m in Sources */,
 				D946EC8E221B925F001532E9 /* UIImageView+AFNetworking.m in Sources */,
+				3573ECCE248A1D700078D1EA /* CGXPickerViewManager.m in Sources */,
 				D921E5C22241D2AB009FA86D /* BrandListPopView.m in Sources */,
 				D9FF5668223A1A30002DC7E5 /* SelectTimeView.m in Sources */,
 				D9FF56B1223A1A3D002DC7E5 /* PGDatePicker+Logic.m in Sources */,
@@ -4214,6 +4291,7 @@
 				D946EC37221B925E001532E9 /* LFAssetCell.m in Sources */,
 				D925D4C8222659880017174C /* AddInsurerInformationViewController.m in Sources */,
 				D946EC3C221B925F001532E9 /* LFAssetManager.m in Sources */,
+				3573ECD0248A1D700078D1EA /* CGXAddressPcikerView.m in Sources */,
 				D96740412277FADA00E76830 /* TFaceMessageCell.m in Sources */,
 				D946ECA9221B925F001532E9 /* UIImageView+WebCache.m in Sources */,
 				D946EC39221B925E001532E9 /* LFPhotoPreviewLivePhotoCell.m in Sources */,
