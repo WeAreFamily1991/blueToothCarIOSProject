@@ -36,10 +36,17 @@ static CustomTabBar *_instance=nil;
     [self setValue:baseTabBar forKey:@"tabBar"];
     [self customTabBar];
     
+     [[NSNotificationCenter defaultCenter] addObserver:self
+                                                selector:@selector(changeSelectedIndex:)
+                                                    name:@"ChangeTabBarIndex"
+                                                  object:nil];
     
 }
 
-
+- (void)changeSelectedIndex:(NSNotification *)notify {
+    NSInteger index = [notify.object integerValue];
+    self.selectedIndex = index;
+}
 - (void)viewDidAppear:(BOOL)animated{
 //    [super viewDidAppear:NO];
 //    [self.selectedViewController endAppearanceTransition];

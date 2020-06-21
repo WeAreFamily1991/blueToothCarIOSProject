@@ -1,5 +1,8 @@
 
 #import "Foundation_defines.h"
+#import "Masonry.h"
+#import "BigClickBT.h"
+
 //http://app.trendy.365use.net/api/login/index
 #define baseDomain  @"app.trendycarshare.jp"
 #define basePort    @"0"
@@ -33,8 +36,36 @@
 
 
 
+/*-------------尺寸&字体---------------*/
+#define kWindowH   [UIScreen mainScreen].bounds.size.height //应用程序的屏幕高度
+#define kWindowW    [UIScreen mainScreen].bounds.size.width  //应用程序的屏幕宽度
+#define HScale(v) v / 667. * (kWindowW>kWindowH?kWindowW:kWindowH) //高度比
+#define WScale(w) w / 375. * (kWindowW<kWindowH?kWindowW:kWindowH) //宽度比
+#define kFont(size) [UIFont systemFontOfSize:(WScale(size))]
 
+#define ThemeColor UIColorFromRGB(0x0E70A1)
+#define SeparatorCOLOR UIColorFromRGB(0xeeeeee)
+#define TableColor UIColorFromRGB(0xf8f8f8)
+#define ClearColor [UIColor clearColor]
+#define WhiteColor [UIColor whiteColor]
+#define BlackColor UIColorFromRGB(0x3a3a3a)
+#define BlackNameColor UIColorFromRGB(0x333333)
+#define OrangeColor UIColorFromRGB(0xfa5151)
+#define BlueColor UIColorFromRGB(0x4574d3)
+#define GreenColor UIColorFromRGB(0x08c161)
 
+#define IS_IPHONEX (kWindowW >= 375.0f && kWindowH >= 812.0f)
+//  安全距离
+#define SafeAreaTopHeight (IS_IPHONEX ? 88.0 : 64.0)
+#define SafeAreaBottomHeight (IS_IPHONEX ? 34:0)
+
+//  状态栏高度
+#define SafeAreaStateHeight (IS_IPHONEX ? 44.0 : 20.0)
+
+/**
+ 弱引用
+ */
+#define YBWeakSelf __weak typeof(self) weakSelf = self;
 
 #define baseUseSSL  [[Utility Share] userAppUseSSL]  //是否加密https
 
@@ -171,14 +202,14 @@ if ([[kUtility_Login userToken] notEmptyOrNull]) {[dictparam setValue:[kUtility_
 #define kScreenWidth            [UIScreen mainScreen].bounds.size.width
 #define SCREEN_WIDTH            [UIScreen mainScreen].bounds.size.width
 #define SCREEN_HEIGHT           [UIScreen mainScreen].bounds.size.height
-#define HScale(v) v / 667. * SCREEN_HEIGHT //高度比
-#define WScale(w) w / 375. * SCREEN_WIDTH //宽度比
+
 #define ScreenBounds [[UIScreen mainScreen] bounds]
 #define DRTopHeight (DRStatusBarHeight + 44)
 #define DRTabBarHeight self.tabBarController.tabBar.frame.size.height
 #define DRStatusBarHeight UIApplication.sharedApplication.statusBarFrame.size.height
 #define FIT_WIDTH [UIScreen mainScreen].bounds.size.width/375
-#define SafeAreaBottomHeight ((IS_IPHONE_X==YES || IS_IPHONE_Xr ==YES || IS_IPHONE_Xs== YES || IS_IPHONE_Xs_Max== YES || IsiPhone11== YES|| IsiPhone11Pro== YES|| IsiPhone11ProMax== YES) ? 34:0)
+
+
 #define kIPhoneXBottomHeight ((SCREEN_HEIGHT >= 812)?34:0) //iPhoneX底部留出34距离
 
 // 以 iPhone6 屏幕为标准，按比例计算宽度

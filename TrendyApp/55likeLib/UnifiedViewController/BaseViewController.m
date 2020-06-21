@@ -130,8 +130,8 @@
 {
     [super viewDidLoad];
     
-    
-    [UTILITY showDemoButton];
+    ///展示Demo按钮
+    //[UTILITY showDemoButton];
     UTILITY.currentViewController=self;
     
         self.automaticallyAdjustsScrollViewInsets=NO;

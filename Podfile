@@ -15,7 +15,6 @@ target "TrendyApp" do
 
     pod 'GooglePlaces', '~> 3.0.3'
     pod 'GoogleMaps', '~> 3.0.3'
-    
     pod 'TXIMSDK_iOS'
 #   pod 'TXIMSDK_TUIKit_iOS'
 # 主模块(必须)

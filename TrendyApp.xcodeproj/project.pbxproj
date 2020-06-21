@@ -23,6 +23,32 @@
 		3577179F248525B100304891 /* UIButton+NZCustom.m in Sources */ = {isa = PBXBuildFile; fileRef = 3577179D248525B100304891 /* UIButton+NZCustom.m */; };
 		357717A42485EC8B00304891 /* SubscribeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 357717A22485EC8B00304891 /* SubscribeVC.m */; };
 		357717A52485EC8B00304891 /* SubscribeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 357717A32485EC8B00304891 /* SubscribeVC.xib */; };
+		6142A43A249B162F0021F678 /* BlueToothTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6142A439249B162F0021F678 /* BlueToothTipView.m */; };
+		6142A458249B25A70021F678 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 6142A43C249B25A70021F678 /* LICENSE */; };
+		6142A459249B25A70021F678 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6142A43F249B25A70021F678 /* NSLayoutConstraint+MASDebugAdditions.m */; };
+		6142A45A249B25A70021F678 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6142A448249B25A70021F678 /* ViewController+MASAdditions.m */; };
+		6142A45B249B25A70021F678 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 6142A44C249B25A70021F678 /* MASCompositeConstraint.m */; };
+		6142A45C249B25A70021F678 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 6142A44D249B25A70021F678 /* MASConstraintMaker.m */; };
+		6142A45D249B25A70021F678 /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 6142A44E249B25A70021F678 /* MASLayoutConstraint.m */; };
+		6142A45E249B25A70021F678 /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6142A44F249B25A70021F678 /* NSArray+MASAdditions.m */; };
+		6142A45F249B25A70021F678 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6142A450249B25A70021F678 /* View+MASAdditions.m */; };
+		6142A460249B25A70021F678 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 6142A453249B25A70021F678 /* MASConstraint.m */; };
+		6142A461249B25A70021F678 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 6142A455249B25A70021F678 /* MASViewConstraint.m */; };
+		6142A462249B25A70021F678 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 6142A456249B25A70021F678 /* MASViewAttribute.m */; };
+		6142A463249B25A70021F678 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 6142A457249B25A70021F678 /* README.md */; };
+		6142A466249B34EA0021F678 /* BigClickBT.m in Sources */ = {isa = PBXBuildFile; fileRef = 6142A465249B34EA0021F678 /* BigClickBT.m */; };
+		6142A46A249C5F2F0021F678 /* TakeCarConfirmVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6142A469249C5F2F0021F678 /* TakeCarConfirmVC.m */; };
+		6142A46D249CBB440021F678 /* TakeCarUnlockVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6142A46C249CBB430021F678 /* TakeCarUnlockVC.m */; };
+		6142A470249CBEDC0021F678 /* TakeCarGetKeyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6142A46F249CBEDC0021F678 /* TakeCarGetKeyVC.m */; };
+		6142A473249CCEBE0021F678 /* FPublicCircleCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6142A471249CCEB50021F678 /* FPublicCircleCollectionViewCell.m */; };
+		6142A4C8249D8F470021F678 /* AlsoCarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6142A4C7249D8F470021F678 /* AlsoCarVC.m */; };
+		6142A4CE249D960E0021F678 /* NIMGrowingTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6142A4CA249D960E0021F678 /* NIMGrowingTextView.m */; };
+		6142A4CF249D960E0021F678 /* NIMGrowingInternalTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6142A4CB249D960E0021F678 /* NIMGrowingInternalTextView.m */; };
+		6142A4D2249DD3D50021F678 /* AlsoCarKeyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6142A4D1249DD3D50021F678 /* AlsoCarKeyVC.m */; };
+		6142A4D5249DD4C70021F678 /* AlsoCarCloseDoorVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6142A4D4249DD4C70021F678 /* AlsoCarCloseDoorVC.m */; };
+		6142A4D8249DD5F50021F678 /* AlsoCarTimerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6142A4D7249DD5F50021F678 /* AlsoCarTimerVC.m */; };
+		6142A4DB249DE5D60021F678 /* AlsoEndVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6142A4DA249DE5D60021F678 /* AlsoEndVC.m */; };
+		6142A4DF249E255F0021F678 /* UsageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6142A4DE249E255F0021F678 /* UsageViewController.m */; };
 		D901ECD5223F44BC00C62C2F /* ScarRegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D901ECD4223F44BC00C62C2F /* ScarRegistrationViewController.m */; };
 		D901ECD8223F4B0D00C62C2F /* ScarRegistrationListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D901ECD7223F4B0D00C62C2F /* ScarRegistrationListViewController.m */; };
 		D901ECDB223F76FE00C62C2F /* OFCImageUpLoadCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = D901ECDA223F76FE00C62C2F /* OFCImageUpLoadCellView.m */; };
@@ -591,6 +617,61 @@
 		357717A32485EC8B00304891 /* SubscribeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubscribeVC.xib; sourceTree = "<group>"; };
 		3DDE5C8727153DBC8384A76B /* Pods-TrendyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrendyApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-TrendyApp/Pods-TrendyApp.release.xcconfig"; sourceTree = "<group>"; };
 		481CB3D47B85DDE27F5C671B /* Pods-TrendyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrendyApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TrendyApp/Pods-TrendyApp.debug.xcconfig"; sourceTree = "<group>"; };
+		6142A438249B162F0021F678 /* BlueToothTipView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlueToothTipView.h; sourceTree = "<group>"; };
+		6142A439249B162F0021F678 /* BlueToothTipView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlueToothTipView.m; sourceTree = "<group>"; };
+		6142A43C249B25A70021F678 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		6142A43E249B25A70021F678 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
+		6142A43F249B25A70021F678 /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
+		6142A440249B25A70021F678 /* MASConstraint+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+Private.h"; sourceTree = "<group>"; };
+		6142A441249B25A70021F678 /* MASLayoutConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASLayoutConstraint.h; sourceTree = "<group>"; };
+		6142A442249B25A70021F678 /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		6142A443249B25A70021F678 /* MASConstraintMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASConstraintMaker.h; sourceTree = "<group>"; };
+		6142A444249B25A70021F678 /* View+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASAdditions.h"; sourceTree = "<group>"; };
+		6142A445249B25A70021F678 /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASAdditions.h"; sourceTree = "<group>"; };
+		6142A446249B25A70021F678 /* MASUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASUtilities.h; sourceTree = "<group>"; };
+		6142A447249B25A70021F678 /* MASViewAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASViewAttribute.h; sourceTree = "<group>"; };
+		6142A448249B25A70021F678 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+MASAdditions.m"; sourceTree = "<group>"; };
+		6142A449249B25A70021F678 /* MASViewConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASViewConstraint.h; sourceTree = "<group>"; };
+		6142A44A249B25A70021F678 /* MASConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASConstraint.h; sourceTree = "<group>"; };
+		6142A44B249B25A70021F678 /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
+		6142A44C249B25A70021F678 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
+		6142A44D249B25A70021F678 /* MASConstraintMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASConstraintMaker.m; sourceTree = "<group>"; };
+		6142A44E249B25A70021F678 /* MASLayoutConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASLayoutConstraint.m; sourceTree = "<group>"; };
+		6142A44F249B25A70021F678 /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+MASAdditions.m"; sourceTree = "<group>"; };
+		6142A450249B25A70021F678 /* View+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "View+MASAdditions.m"; sourceTree = "<group>"; };
+		6142A451249B25A70021F678 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		6142A452249B25A70021F678 /* Masonry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Masonry.h; sourceTree = "<group>"; };
+		6142A453249B25A70021F678 /* MASConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASConstraint.m; sourceTree = "<group>"; };
+		6142A454249B25A70021F678 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+MASAdditions.h"; sourceTree = "<group>"; };
+		6142A455249B25A70021F678 /* MASViewConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewConstraint.m; sourceTree = "<group>"; };
+		6142A456249B25A70021F678 /* MASViewAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewAttribute.m; sourceTree = "<group>"; };
+		6142A457249B25A70021F678 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		6142A464249B34E70021F678 /* BigClickBT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BigClickBT.h; sourceTree = "<group>"; };
+		6142A465249B34EA0021F678 /* BigClickBT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BigClickBT.m; sourceTree = "<group>"; };
+		6142A468249C5F2F0021F678 /* TakeCarConfirmVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TakeCarConfirmVC.h; sourceTree = "<group>"; };
+		6142A469249C5F2F0021F678 /* TakeCarConfirmVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TakeCarConfirmVC.m; sourceTree = "<group>"; };
+		6142A46B249CBB430021F678 /* TakeCarUnlockVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TakeCarUnlockVC.h; sourceTree = "<group>"; };
+		6142A46C249CBB430021F678 /* TakeCarUnlockVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TakeCarUnlockVC.m; sourceTree = "<group>"; };
+		6142A46E249CBEDC0021F678 /* TakeCarGetKeyVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TakeCarGetKeyVC.h; sourceTree = "<group>"; };
+		6142A46F249CBEDC0021F678 /* TakeCarGetKeyVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TakeCarGetKeyVC.m; sourceTree = "<group>"; };
+		6142A471249CCEB50021F678 /* FPublicCircleCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPublicCircleCollectionViewCell.m; sourceTree = "<group>"; };
+		6142A472249CCEBC0021F678 /* FPublicCircleCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPublicCircleCollectionViewCell.h; sourceTree = "<group>"; };
+		6142A4C6249D8F470021F678 /* AlsoCarVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlsoCarVC.h; sourceTree = "<group>"; };
+		6142A4C7249D8F470021F678 /* AlsoCarVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlsoCarVC.m; sourceTree = "<group>"; };
+		6142A4CA249D960E0021F678 /* NIMGrowingTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIMGrowingTextView.m; sourceTree = "<group>"; };
+		6142A4CB249D960E0021F678 /* NIMGrowingInternalTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIMGrowingInternalTextView.m; sourceTree = "<group>"; };
+		6142A4CC249D960E0021F678 /* NIMGrowingInternalTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIMGrowingInternalTextView.h; sourceTree = "<group>"; };
+		6142A4CD249D960E0021F678 /* NIMGrowingTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIMGrowingTextView.h; sourceTree = "<group>"; };
+		6142A4D0249DD3D50021F678 /* AlsoCarKeyVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlsoCarKeyVC.h; sourceTree = "<group>"; };
+		6142A4D1249DD3D50021F678 /* AlsoCarKeyVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlsoCarKeyVC.m; sourceTree = "<group>"; };
+		6142A4D3249DD4C70021F678 /* AlsoCarCloseDoorVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlsoCarCloseDoorVC.h; sourceTree = "<group>"; };
+		6142A4D4249DD4C70021F678 /* AlsoCarCloseDoorVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlsoCarCloseDoorVC.m; sourceTree = "<group>"; };
+		6142A4D6249DD5F50021F678 /* AlsoCarTimerVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlsoCarTimerVC.h; sourceTree = "<group>"; };
+		6142A4D7249DD5F50021F678 /* AlsoCarTimerVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlsoCarTimerVC.m; sourceTree = "<group>"; };
+		6142A4D9249DE5D60021F678 /* AlsoEndVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlsoEndVC.h; sourceTree = "<group>"; };
+		6142A4DA249DE5D60021F678 /* AlsoEndVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlsoEndVC.m; sourceTree = "<group>"; };
+		6142A4DD249E255F0021F678 /* UsageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UsageViewController.h; sourceTree = "<group>"; };
+		6142A4DE249E255F0021F678 /* UsageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UsageViewController.m; sourceTree = "<group>"; };
 		D901ECD3223F44BC00C62C2F /* ScarRegistrationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScarRegistrationViewController.h; sourceTree = "<group>"; };
 		D901ECD4223F44BC00C62C2F /* ScarRegistrationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScarRegistrationViewController.m; sourceTree = "<group>"; };
 		D901ECD6223F4B0D00C62C2F /* ScarRegistrationListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScarRegistrationListViewController.h; sourceTree = "<group>"; };
@@ -1704,6 +1785,129 @@
 				357717A32485EC8B00304891 /* SubscribeVC.xib */,
 			);
 			path = "03预约";
+			sourceTree = "<group>";
+		};
+		6142A435249B15E00021F678 /* 新增 */ = {
+			isa = PBXGroup;
+			children = (
+				6142A4C9249D960E0021F678 /* GrowingTextView */,
+				6142A437249B15F00021F678 /* View */,
+				6142A436249B15E90021F678 /* VC */,
+			);
+			path = "新增";
+			sourceTree = "<group>";
+		};
+		6142A436249B15E90021F678 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				6142A4DC249DED7A0021F678 /* 使用情况 */,
+				6142A4C5249D8EF80021F678 /* 还车确认 */,
+				6142A467249C5EBF0021F678 /* 取车确认 */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		6142A437249B15F00021F678 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6142A438249B162F0021F678 /* BlueToothTipView.h */,
+				6142A439249B162F0021F678 /* BlueToothTipView.m */,
+				6142A472249CCEBC0021F678 /* FPublicCircleCollectionViewCell.h */,
+				6142A471249CCEB50021F678 /* FPublicCircleCollectionViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6142A43B249B25A70021F678 /* Masonry */ = {
+			isa = PBXGroup;
+			children = (
+				6142A43C249B25A70021F678 /* LICENSE */,
+				6142A43D249B25A70021F678 /* Masonry */,
+				6142A457249B25A70021F678 /* README.md */,
+			);
+			path = Masonry;
+			sourceTree = "<group>";
+		};
+		6142A43D249B25A70021F678 /* Masonry */ = {
+			isa = PBXGroup;
+			children = (
+				6142A43E249B25A70021F678 /* MASCompositeConstraint.h */,
+				6142A44C249B25A70021F678 /* MASCompositeConstraint.m */,
+				6142A44A249B25A70021F678 /* MASConstraint.h */,
+				6142A453249B25A70021F678 /* MASConstraint.m */,
+				6142A440249B25A70021F678 /* MASConstraint+Private.h */,
+				6142A443249B25A70021F678 /* MASConstraintMaker.h */,
+				6142A44D249B25A70021F678 /* MASConstraintMaker.m */,
+				6142A441249B25A70021F678 /* MASLayoutConstraint.h */,
+				6142A44E249B25A70021F678 /* MASLayoutConstraint.m */,
+				6142A452249B25A70021F678 /* Masonry.h */,
+				6142A446249B25A70021F678 /* MASUtilities.h */,
+				6142A447249B25A70021F678 /* MASViewAttribute.h */,
+				6142A456249B25A70021F678 /* MASViewAttribute.m */,
+				6142A449249B25A70021F678 /* MASViewConstraint.h */,
+				6142A455249B25A70021F678 /* MASViewConstraint.m */,
+				6142A445249B25A70021F678 /* NSArray+MASAdditions.h */,
+				6142A44F249B25A70021F678 /* NSArray+MASAdditions.m */,
+				6142A442249B25A70021F678 /* NSArray+MASShorthandAdditions.h */,
+				6142A44B249B25A70021F678 /* NSLayoutConstraint+MASDebugAdditions.h */,
+				6142A43F249B25A70021F678 /* NSLayoutConstraint+MASDebugAdditions.m */,
+				6142A444249B25A70021F678 /* View+MASAdditions.h */,
+				6142A450249B25A70021F678 /* View+MASAdditions.m */,
+				6142A451249B25A70021F678 /* View+MASShorthandAdditions.h */,
+				6142A454249B25A70021F678 /* ViewController+MASAdditions.h */,
+				6142A448249B25A70021F678 /* ViewController+MASAdditions.m */,
+			);
+			path = Masonry;
+			sourceTree = "<group>";
+		};
+		6142A467249C5EBF0021F678 /* 取车确认 */ = {
+			isa = PBXGroup;
+			children = (
+				6142A468249C5F2F0021F678 /* TakeCarConfirmVC.h */,
+				6142A469249C5F2F0021F678 /* TakeCarConfirmVC.m */,
+				6142A46B249CBB430021F678 /* TakeCarUnlockVC.h */,
+				6142A46C249CBB430021F678 /* TakeCarUnlockVC.m */,
+				6142A46E249CBEDC0021F678 /* TakeCarGetKeyVC.h */,
+				6142A46F249CBEDC0021F678 /* TakeCarGetKeyVC.m */,
+			);
+			path = "取车确认";
+			sourceTree = "<group>";
+		};
+		6142A4C5249D8EF80021F678 /* 还车确认 */ = {
+			isa = PBXGroup;
+			children = (
+				6142A4C6249D8F470021F678 /* AlsoCarVC.h */,
+				6142A4C7249D8F470021F678 /* AlsoCarVC.m */,
+				6142A4D0249DD3D50021F678 /* AlsoCarKeyVC.h */,
+				6142A4D1249DD3D50021F678 /* AlsoCarKeyVC.m */,
+				6142A4D3249DD4C70021F678 /* AlsoCarCloseDoorVC.h */,
+				6142A4D4249DD4C70021F678 /* AlsoCarCloseDoorVC.m */,
+				6142A4D6249DD5F50021F678 /* AlsoCarTimerVC.h */,
+				6142A4D7249DD5F50021F678 /* AlsoCarTimerVC.m */,
+				6142A4D9249DE5D60021F678 /* AlsoEndVC.h */,
+				6142A4DA249DE5D60021F678 /* AlsoEndVC.m */,
+			);
+			path = "还车确认";
+			sourceTree = "<group>";
+		};
+		6142A4C9249D960E0021F678 /* GrowingTextView */ = {
+			isa = PBXGroup;
+			children = (
+				6142A4CC249D960E0021F678 /* NIMGrowingInternalTextView.h */,
+				6142A4CB249D960E0021F678 /* NIMGrowingInternalTextView.m */,
+				6142A4CD249D960E0021F678 /* NIMGrowingTextView.h */,
+				6142A4CA249D960E0021F678 /* NIMGrowingTextView.m */,
+			);
+			path = GrowingTextView;
+			sourceTree = "<group>";
+		};
+		6142A4DC249DED7A0021F678 /* 使用情况 */ = {
+			isa = PBXGroup;
+			children = (
+				6142A4DD249E255F0021F678 /* UsageViewController.h */,
+				6142A4DE249E255F0021F678 /* UsageViewController.m */,
+			);
+			path = "使用情况";
 			sourceTree = "<group>";
 		};
 		BB5E58BAAB8A0877792A08AE /* Frameworks */ = {
@@ -2946,6 +3150,7 @@
 		D946ECBC221BA77D001532E9 /* 02租车 */ = {
 			isa = PBXGroup;
 			children = (
+				6142A435249B15E00021F678 /* 新增 */,
 				D9FB7EBA2249C86E0002B053 /* view */,
 				D9E95C42222E3B88002316C0 /* OtherPage */,
 				D9F6DD1F221E50FB005600A9 /* DetailRentCarHomeCellView.h */,
@@ -3015,14 +3220,17 @@
 		D9673F6E2277FADA00E76830 /* MYTUIKit */ = {
 			isa = PBXGroup;
 			children = (
-				D9673F6F2277FADA00E76830 /* TUIKitResource.bundle */,
+				6142A464249B34E70021F678 /* BigClickBT.h */,
+				6142A465249B34EA0021F678 /* BigClickBT.m */,
+				6142A43B249B25A70021F678 /* Masonry */,
 				D9673F702277FADA00E76830 /* section */,
+				D9673FFC2277FADA00E76830 /* third */,
+				D96740122277FADA00E76830 /* TUIKit.h */,
 				D9673FFA2277FADA00E76830 /* TUIKit.m */,
 				D9673FFB2277FADA00E76830 /* TUIKitConfig.h */,
-				D9673FFC2277FADA00E76830 /* third */,
 				D96740112277FADA00E76830 /* TUIKitConfig.m */,
-				D96740122277FADA00E76830 /* TUIKit.h */,
 				D96740132277FADA00E76830 /* TUIKitFace.bundle */,
+				D9673F6F2277FADA00E76830 /* TUIKitResource.bundle */,
 			);
 			path = MYTUIKit;
 			sourceTree = "<group>";
@@ -3736,6 +3944,7 @@
 				D946EC01221B925E001532E9 /* 08sch@3x.png in Resources */,
 				D946ECB4221B925F001532E9 /* SelectTypeDemo.plist in Resources */,
 				D946ECB2221B925F001532E9 /* DesignDepartment.plist in Resources */,
+				6142A463249B25A70021F678 /* README.md in Resources */,
 				D946EBE1221B925E001532E9 /* ImageBrowser@2x.png in Resources */,
 				D946EBE0221B925E001532E9 /* ImageBrowser@3x.png in Resources */,
 				D946EBDC221B925E001532E9 /* ImageBrowserChecked.png in Resources */,
@@ -3766,6 +3975,7 @@
 				D90F775C221B8CCA003A8EB5 /* Assets.xcassets in Resources */,
 				D96740142277FADA00E76830 /* TUIKitResource.bundle in Resources */,
 				D946ECB5221B925F001532E9 /* Appdata.plist in Resources */,
+				6142A458249B25A70021F678 /* LICENSE in Resources */,
 				D946EC02221B925E001532E9 /* 08sch@2x.png in Resources */,
 				D9F6DD17221E4489005600A9 /* HomeCellectionCellView.xib in Resources */,
 				D946EBDD221B925E001532E9 /* ImageBrowser.png in Resources */,
@@ -3906,11 +4116,13 @@
 				D9FF565F2239E629002DC7E5 /* AutomobileBrandModelViewController.m in Sources */,
 				D946EC3B221B925F001532E9 /* LFAssetManager+Authorization.m in Sources */,
 				D946EC69221B925F001532E9 /* NSObject+JSONCategories.m in Sources */,
+				6142A45F249B25A70021F678 /* View+MASAdditions.m in Sources */,
 				D96740542277FADA00E76830 /* TNaviBarIndicatorView.m in Sources */,
 				D946EC0E221B925E001532E9 /* PLTextView.m in Sources */,
 				D967401A2277FADA00E76830 /* TPickView.m in Sources */,
 				D96952022227CEE100C65C47 /* OFCVehicleInspectionPhotoCellView.m in Sources */,
 				D967402B2277FADA00E76830 /* TPopView.m in Sources */,
+				6142A470249CBEDC0021F678 /* TakeCarGetKeyVC.m in Sources */,
 				D9EFD3772229207A0051C210 /* LanguageService.m in Sources */,
 				3573ECD4248A1D700078D1EA /* CGXAddressModel.m in Sources */,
 				D946EC2F221B925E001532E9 /* LFBaseViewController.m in Sources */,
@@ -3936,6 +4148,8 @@
 				D946EC9A221B925F001532E9 /* AFSecurityPolicy.m in Sources */,
 				D946EC15221B925E001532E9 /* BaseViewController.m in Sources */,
 				D9ACB2612275A78F00376E91 /* MyTXIMUIKitViewController.m in Sources */,
+				6142A4D8249DD5F50021F678 /* AlsoCarTimerVC.m in Sources */,
+				6142A45C249B25A70021F678 /* MASConstraintMaker.m in Sources */,
 				D946EC1F221B925E001532E9 /* LFToGIF.m in Sources */,
 				D946EBF8221B925E001532E9 /* MJRefreshHeader.m in Sources */,
 				D946EC4F221B925F001532E9 /* SubRectOnly.m in Sources */,
@@ -3960,6 +4174,7 @@
 				D946EC44221B925F001532E9 /* LFResultObject.m in Sources */,
 				D9F6DD26221E6991005600A9 /* RentCarExpressCenterCellView.m in Sources */,
 				D95333082249CC6A00DB10B1 /* CommentOrderSmallTimeCellView.m in Sources */,
+				6142A4DB249DE5D60021F678 /* AlsoEndVC.m in Sources */,
 				D946EBFB221B925E001532E9 /* MJRefreshComponent.m in Sources */,
 				D96740292277FADA00E76830 /* TAddCollectionCell.m in Sources */,
 				D9FF56A9223A1A3D002DC7E5 /* PGPickerColumnCell.m in Sources */,
@@ -3989,6 +4204,7 @@
 				D9AA61FE2230E90500518D5D /* CalendarViewController.m in Sources */,
 				D946ECA8221B925F001532E9 /* NSData+ImageContentType.m in Sources */,
 				D925D4BC222657EB0017174C /* FCSelectCellView.m in Sources */,
+				6142A46D249CBB440021F678 /* TakeCarUnlockVC.m in Sources */,
 				D9FF56B5223A1A3D002DC7E5 /* PGDatePicker+DateHourMinute.m in Sources */,
 				D946EC56221B925F001532E9 /* PerforManceTestTool.m in Sources */,
 				D96951FC2227C9EF00C65C47 /* VeicleOwnorInfoViewController.m in Sources */,
@@ -4013,12 +4229,15 @@
 				D946EC52221B925F001532E9 /* UIScrollView+Extension.m in Sources */,
 				D946EC2E221B925E001532E9 /* LF_FileUtility.m in Sources */,
 				D9FF56B2223A1A3D002DC7E5 /* NSBundle+PGDatePicker.m in Sources */,
+				6142A4CE249D960E0021F678 /* NIMGrowingTextView.m in Sources */,
 				D946EC13221B925E001532E9 /* SelectAddressView.m in Sources */,
 				D946EC33221B925E001532E9 /* LFPhotoPreviewController.m in Sources */,
+				6142A45A249B25A70021F678 /* ViewController+MASAdditions.m in Sources */,
 				D946EC0B221B925E001532E9 /* CExpandHeader.m in Sources */,
 				D925D4DF22268ED60017174C /* PersonalHomeMyEvaluationCellView.m in Sources */,
 				D946EC0F221B925E001532E9 /* SelectDateView.m in Sources */,
 				D9FD3B42221D060E008F7B68 /* OrderHomeSmallCellView.m in Sources */,
+				6142A473249CCEBE0021F678 /* FPublicCircleCollectionViewCell.m in Sources */,
 				D946EC0A221B925E001532E9 /* RHTableView.m in Sources */,
 				D944B5F022488563002B93D3 /* PerconalAllOrderListViewController.m in Sources */,
 				D946EC90221B925F001532E9 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
@@ -4044,6 +4263,7 @@
 				D9135D73221FF10D00FDBEC0 /* CarListViewController.m in Sources */,
 				D946EC67221B925F001532E9 /* UILabel+atrribulttext.m in Sources */,
 				D99A8DB82228FAD200951634 /* SettingViewController.m in Sources */,
+				6142A460249B25A70021F678 /* MASConstraint.m in Sources */,
 				D946EC99221B925F001532E9 /* AFNetworkReachabilityManager.m in Sources */,
 				D946EC57221B925F001532E9 /* WSButtonGroup.m in Sources */,
 				D9BBAF2722326B090055E61B /* SignInPageViewController.m in Sources */,
@@ -4058,6 +4278,7 @@
 				D946EC85221B925F001532E9 /* WDMethod.m in Sources */,
 				D9FF56A7223A1A3D002DC7E5 /* PGDatePicker.m in Sources */,
 				D96740582277FADA00E76830 /* TUIKit.m in Sources */,
+				6142A4D5249DD4C70021F678 /* AlsoCarCloseDoorVC.m in Sources */,
 				D967403F2277FADA00E76830 /* TVideoMessageCell.m in Sources */,
 				D946EC7A221B925F001532E9 /* Utility_Location.m in Sources */,
 				D9EE58512230BB6900B4EEC0 /* MoreSortItemPopView.m in Sources */,
@@ -4140,6 +4361,7 @@
 				D9FC83FE22320C8A00929FD6 /* CalendarSmallCellView.m in Sources */,
 				D9F7561A222F9A4A00A1B95C /* MyRegistViewController.m in Sources */,
 				D9FB7EBD2249C8AF0002B053 /* SuperLongRentalCarView.m in Sources */,
+				6142A4DF249E255F0021F678 /* UsageViewController.m in Sources */,
 				D946EC7B221B925F001532E9 /* NetEngine.m in Sources */,
 				D9D859D62224F01B00E22BB5 /* AddInsuranceCenterCellView.m in Sources */,
 				D946EC5B221B925F001532E9 /* TableViewPerfomanceTest.m in Sources */,
@@ -4150,6 +4372,7 @@
 				D9FF56C4223A5483002DC7E5 /* CarlistOrderSettingViewController.m in Sources */,
 				D946EC61221B925F001532E9 /* SVPopSomeThing.m in Sources */,
 				D946EC21221B925E001532E9 /* LFWeakProxy.m in Sources */,
+				6142A45B249B25A70021F678 /* MASCompositeConstraint.m in Sources */,
 				D946EC8F221B925F001532E9 /* UIButton+AFNetworking.m in Sources */,
 				D9FF56652239F877002DC7E5 /* SelectAutoMobileBandModelCellView.m in Sources */,
 				D946EC4B221B925F001532E9 /* WSimageToolUseList.m in Sources */,
@@ -4210,10 +4433,12 @@
 				D946EC30221B925E001532E9 /* LFAlbumPickerController.m in Sources */,
 				D946EC6D221B925F001532E9 /* NSString+expanded.m in Sources */,
 				D9E95C45222E3B88002316C0 /* CommonProblemViewController.m in Sources */,
+				6142A43A249B162F0021F678 /* BlueToothTipView.m in Sources */,
 				D96740242277FADA00E76830 /* TResponderTextView.m in Sources */,
 				D946EC9B221B925F001532E9 /* MYBaseService.m in Sources */,
 				D9E95C4E222E4798002316C0 /* ChooseAStoreViewController.m in Sources */,
 				D96740342277FADA00E76830 /* TSystemMessageCell.m in Sources */,
+				6142A459249B25A70021F678 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				D967401D2277FADA00E76830 /* TModifyView.m in Sources */,
 				D946EBD5221B925E001532E9 /* NewPagedFlowView.m in Sources */,
 				D946EC82221B925F001532E9 /* WDIvar.m in Sources */,
@@ -4233,6 +4458,7 @@
 				D946EC73221B925F001532E9 /* UIColor+expanded.m in Sources */,
 				D99A8DBB2228FB1900951634 /* GSettingCellView.m in Sources */,
 				D946EC86221B925F001532E9 /* WSNetTools.m in Sources */,
+				6142A4C8249D8F470021F678 /* AlsoCarVC.m in Sources */,
 				D946EBED221B925E001532E9 /* UIView+MJExtension.m in Sources */,
 				D96740482277FADA00E76830 /* TDeleteMemberController.m in Sources */,
 				D946EC20221B925E001532E9 /* LFGifPlayerManager.m in Sources */,
@@ -4242,10 +4468,12 @@
 				D925D4BA222657EB0017174C /* FCTUnitTextfieldCellView.m in Sources */,
 				D93D56672255F0A8004746D2 /* OrderSearchResultListViewController.m in Sources */,
 				D946ECAB221B925F001532E9 /* SDImageCacheConfig.m in Sources */,
+				6142A461249B25A70021F678 /* MASViewConstraint.m in Sources */,
 				D9FF56A6223A1A3D002DC7E5 /* PGDatePicker+MinuteAndSecond.m in Sources */,
 				D946EC80221B925F001532E9 /* WSModelObject.m in Sources */,
 				D946ECB3221B925F001532E9 /* DEMOHOMEViewController.m in Sources */,
 				D946EBF0221B925E001532E9 /* MJRefreshBackNormalFooter.m in Sources */,
+				6142A462249B25A70021F678 /* MASViewAttribute.m in Sources */,
 				3577179F248525B100304891 /* UIButton+NZCustom.m in Sources */,
 				D96740392277FADA00E76830 /* TMessageCell.m in Sources */,
 				D946EC59221B925F001532E9 /* SwichButtonDemo.m in Sources */,
@@ -4274,6 +4502,7 @@
 				D921E5C52241DC58009FA86D /* VehicleDetailsCarDeployViewController.m in Sources */,
 				D946EC04221B925E001532E9 /* MyWebView.m in Sources */,
 				D9FF56B9223A1A3D002DC7E5 /* PGDatePicker+TimeAndSecond.m in Sources */,
+				6142A4CF249D960E0021F678 /* NIMGrowingInternalTextView.m in Sources */,
 				D9FF56AD223A1A3D002DC7E5 /* PGDatePicker+YearAndMonth.m in Sources */,
 				D9F19593222D1C6B0020E8E6 /* IntegralDetailListCellView.m in Sources */,
 				D9D21E7322324CD300B749DE /* TimeSelectTowPopView.m in Sources */,
@@ -4281,6 +4510,7 @@
 				D946EBF1221B925E001532E9 /* MJRefreshAutoStateFooter.m in Sources */,
 				D946EBE3221B925E001532E9 /* LJImageRollingView.m in Sources */,
 				D946EC87221B925F001532E9 /* WDTypeEncoding.m in Sources */,
+				6142A46A249C5F2F0021F678 /* TakeCarConfirmVC.m in Sources */,
 				D946EBF6221B925E001532E9 /* MJRefreshGifHeader.m in Sources */,
 				D9EFD37422291B390051C210 /* FeedBackViewController.m in Sources */,
 				D946EC78221B925F001532E9 /* MYViewBase.m in Sources */,
@@ -4315,6 +4545,7 @@
 				D9B86F0022375D0700387482 /* ModifyPersonalInforViewController.m in Sources */,
 				D9D859D02224E4A700E22BB5 /* PaySuccessViewController.m in Sources */,
 				D946EC3F221B925F001532E9 /* LFPhotoEditManager.m in Sources */,
+				6142A466249B34EA0021F678 /* BigClickBT.m in Sources */,
 				D96740372277FADA00E76830 /* TFaceView.m in Sources */,
 				D925D4C5222658BF0017174C /* FormCellService.m in Sources */,
 				D96740562277FADA00E76830 /* TConversationView.m in Sources */,
@@ -4332,6 +4563,7 @@
 				D925D4BE222657EB0017174C /* FCTextFieldCellView.m in Sources */,
 				D946EBDB221B925E001532E9 /* XHImageViewer.m in Sources */,
 				D928FC28223A32F0007D9C2F /* UtilitySelectTime.m in Sources */,
+				6142A45E249B25A70021F678 /* NSArray+MASAdditions.m in Sources */,
 				D946EC10221B925E001532E9 /* SelectRightTypeView.m in Sources */,
 				D946EC1D221B925E001532E9 /* YUBaseTabBar.m in Sources */,
 				D9FD1CAF223B9F6A009CB72C /* CostSettingViewController.m in Sources */,
@@ -4346,6 +4578,7 @@
 				D946ECA0221B925F001532E9 /* UIImageView+HighlightedWebCache.m in Sources */,
 				D9FF56BB223A1A3D002DC7E5 /* PGDatePicker+DateAndTime.m in Sources */,
 				D946EBE9221B925E001532E9 /* MJRefreshConst.m in Sources */,
+				6142A45D249B25A70021F678 /* MASLayoutConstraint.m in Sources */,
 				D9DACAB2222CBDD100D4B1B5 /* ModifyPasswordViewController.m in Sources */,
 				D905786C222628A2006CDDE2 /* ConfirmReservationInformationViewController.m in Sources */,
 				D946EC54221B925F001532E9 /* MyUiActionSheet.m in Sources */,
@@ -4358,6 +4591,7 @@
 				D946EC7C221B925F001532E9 /* MYRHTableView.m in Sources */,
 				D946EC4D221B925F001532E9 /* WSimageToolUse.m in Sources */,
 				D9AE3E8F222CD13F0040B89E /* CustomerServiceCenterViewController.m in Sources */,
+				6142A4D2249DD3D50021F678 /* AlsoCarKeyVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -4502,7 +4736,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PW7B9Q75FT;
+				DEVELOPMENT_TEAM = 8YRUJ33AGX;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -4552,7 +4786,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PW7B9Q75FT;
+				DEVELOPMENT_TEAM = 8YRUJ33AGX;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

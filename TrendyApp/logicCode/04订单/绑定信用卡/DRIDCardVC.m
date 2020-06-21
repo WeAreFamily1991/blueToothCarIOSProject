@@ -51,6 +51,8 @@
     contentLab.frame =CGRectMake(WScale(25), WScale(260), SCREEN_WIDTH-WScale(50), WScale(32));
     UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;
     [keyWindow addSubview:self.backView];
+    
+    //111111
 }
 -(void)cancelBtnClick
 {

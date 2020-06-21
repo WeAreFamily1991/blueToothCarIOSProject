@@ -13,12 +13,18 @@
 #import "GgleMapCellView.h"
 #import "VehicleDetailsViewController.h"
 
+#import "BlueToothTipView.h"
+#import "TakeCarConfirmVC.h"
+#import "AlsoCarVC.h"
+#import "UsageViewController.h"
+
 @interface GoogleMapMyViewController ()<GMSMapViewDelegate,UITextFieldDelegate>
 @property(nonatomic,strong)GMSMapView *mapView ;
 @property(nonatomic,strong)GMSMutableCameraPosition *camera;
 @property(nonatomic,strong)UITextField*txtSearch;
 @property(nonatomic,strong)NSMutableArray*markerArray;
-
+@property(nonatomic,strong)BlueToothTipView *tipView;
+@property(nonatomic,strong)UIButton *zuBtn;
 @end
 
 @implementation GoogleMapMyViewController
@@ -32,6 +38,7 @@
             if (weakSelf.mapView==nil) {
                 [weakSelf addView];
                 [weakSelf loadData];
+                [weakSelf zuBtn];
             }
         }
     }];
@@ -166,6 +173,64 @@
             
         }
     }];
+}
+
+#pragma mark **************** 新增
+-(BlueToothTipView *)tipView
+{
+    YBWeakSelf;
+    if (!_tipView) {
+        _tipView = [[BlueToothTipView alloc] init];
+        [_tipView setBlock:^(NSInteger Tag) {
+            
+            ///确认开始用车
+            if (Tag == 0)
+            {
+                weakSelf.tipView.index = 1;
+                [weakSelf.tipView show];
+            }
+            ///重新连接
+            else if (Tag == 1)
+            {
+                weakSelf.tipView.index = 2;
+                [weakSelf.tipView show];
+            }
+            ///蓝牙配对成功 -- 下一步
+            else if (Tag == 2)
+            {
+                //取车
+//                TakeCarConfirmVC *carVC = [[TakeCarConfirmVC alloc] init];
+//                [weakSelf.navigationController pushViewController:carVC animated:YES];
+                
+                //还车
+//                AlsoCarVC *carVC = [[AlsoCarVC alloc] init];
+//                [weakSelf.navigationController pushViewController:carVC animated:YES];
+                
+                ///使用情况
+                UsageViewController *usageVC = [[UsageViewController alloc] init];
+                [weakSelf.navigationController pushViewController:usageVC animated:YES];
+            }
+        }];
+    }
+    return _tipView;
+}
+
+-(UIButton *)zuBtn
+{
+    if (!_zuBtn) {
+        _zuBtn = [UIButton buttonWithImage:@"fmenui3" target:self action:@selector(zuBtnClick) showView:self.view];
+        [_zuBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.centerX.mas_equalTo(self.view);
+            make.bottom.mas_equalTo(-SafeAreaBottomHeight-WScale(50));
+        }];
+    }
+    return _zuBtn;
+}
+//点击租车
+-(void)zuBtnClick
+{
+    self.tipView.index = 0;
+    [self.tipView show];
 }
 /*
 #pragma mark - Navigation
