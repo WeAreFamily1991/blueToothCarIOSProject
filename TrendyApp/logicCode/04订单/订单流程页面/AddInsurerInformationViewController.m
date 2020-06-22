@@ -42,8 +42,7 @@
                 dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                     [weakSelf.navigationController popViewControllerAnimated:YES];
                     weakSelf.allcallBlock?weakSelf.allcallBlock(nil,200,nil):0;
-                });
-                
+                });                
             }];
         }
     }];
@@ -130,7 +129,6 @@
                           @"isMust":@"1",
                           },
                       @{
-                          
                           @"name":kS(@"addInsurerInfo", @"Postal_Code"),//@"name":@"郵遞區號",
                           @"classStr":@"FCTextFieldCellView",
                           @"placeholder":kS(@"addInsurerInfo", @"hint_input_pls"),
@@ -186,19 +184,13 @@
                           },
                       ] toBeMutableObj];
     }
-    
-    
-    
-    
     arraytitle=[arraytitle toBeMutableObj];
     [_mtableView.defaultSection.noReUseViewArray removeAllObjects];
     for (int i=0; i<arraytitle.count; i++) {
         NSMutableDictionary*dic=arraytitle[i];
         BaseFormCellView*viewCell=[UIView getViewWithConfigData:dic];
         [_mtableView.defaultSection.noReUseViewArray addObject:viewCell];
-        
     }
-    
     [_mtableView reloadData];
 }
 

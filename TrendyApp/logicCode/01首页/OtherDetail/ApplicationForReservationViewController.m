@@ -75,14 +75,14 @@
         viewCell2.layer.borderWidth=1;
         viewCell2.layer.borderColor=RGBACOLOR(238, 238, 238, 0.8).CGColor;
         viewCell2.layer.cornerRadius=5;
-        UIImageView*imgVImportant=[RHMethods imageviewWithFrame:CGRectMake(15, viewCell2.frameYH+25, 16, 16) defaultimage:@"prompti" supView:viewContent];
-        UILabel *lbImportant=[RHMethods lableX:46 Y:imgVImportant.frameY W:kScreenWidth-46-15 Height:0 font:13 superview:viewContent withColor:rgb(153, 153, 153) text:[NSString stringWithFormat:@"%@：%@",kS(@"carApplyBooking", @"DoorExpenses"),[_dicAll ojsk:@"configs"]]];
-        NSAttributedString * attrStr = [[NSAttributedString alloc] initWithData:[lbImportant.text  dataUsingEncoding:NSUnicodeStringEncoding] options:@{NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType, } documentAttributes:nil error:nil];//NSFontAttributeName:[UIFont systemFontOfSize:13.0f]
-        lbImportant.attributedText = attrStr;//用于显示
-        lbImportant.frameHeight=1000;
-        [lbImportant sizeToFit];
+//        UIImageView*imgVImportant=[RHMethods imageviewWithFrame:CGRectMake(15, viewCell2.frameYH+25, 16, 16) defaultimage:@"prompti" supView:viewContent];
+//        UILabel *lbImportant=[RHMethods lableX:46 Y:imgVImportant.frameY W:kScreenWidth-46-15 Height:0 font:13 superview:viewContent withColor:rgb(153, 153, 153) text:[NSString stringWithFormat:@"%@：%@",kS(@"carApplyBooking", @"DoorExpenses"),[_dicAll ojsk:@"configs"]]];
+//        NSAttributedString * attrStr = [[NSAttributedString alloc] initWithData:[lbImportant.text  dataUsingEncoding:NSUnicodeStringEncoding] options:@{NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType, } documentAttributes:nil error:nil];//NSFontAttributeName:[UIFont systemFontOfSize:13.0f]
+//        lbImportant.attributedText = attrStr;//用于显示
+//        lbImportant.frameHeight=1000;
+//        [lbImportant sizeToFit];
         
-        viewContent.frameHeight=lbImportant.frameYH+25;
+//        viewContent.frameHeight=lbImportant.frameYH+25;
     }
     
     {

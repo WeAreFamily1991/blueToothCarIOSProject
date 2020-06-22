@@ -12,6 +12,8 @@
 #import "VertificationPhotoUpdataViewController.h"
 #import "FCSelectCellView.h"
 #import "FCTextFieldCellView.h"
+#import "SelectTimeView.h"
+#import "SelectItemView.h"
 //#import "FCSelectCellView.h"
 @interface MyCertificationViewController ()
 {
@@ -47,7 +49,6 @@
             _is_auth=@"0";
         }
     }
-//    _is_auth=@"0";
     self.data=self.userInfo;
     [self addView];
     if ([[self.userInfo ojsk:@"driving_type"] isEqualToString:@"1"]) {
@@ -62,7 +63,6 @@
         }else{
             [view_marray addObjectsFromArray:_centerObj2.noReUseViewArray];
         }
-        
         for (FCSelectCellView*subViews in view_marray) {
             NSArray*keyArray=[subViews.data ojk:@"keyArray"];
             if (keyArray.count) {
@@ -77,11 +77,9 @@
                             if (range.length == 0) {
                                 range=[strpath rangeOfString:@"trendycarshare.jp/upload/"];
                             }
-                            
 //                        https://h5.trendycarshare.jp/upload/2019-12-04/1575441133.jpeg
                             strpath=[strpath substringFromIndex:range.location+range.length];
                         }
-                        
                         [mdic setObject:strpath forKey:keyStr];
                     }else{
                         isAdd=NO;
@@ -95,7 +93,6 @@
                 subViews.defaultTextfield.text=[self.data ojk:[subViews.data ojk:@"requestkey"]];
             }else if([[subViews.data ojk:@"requestkey"] isEqualToString:@"driving_country_id"]){
                 if ([[self.data ojsk:@"driving_country_id"] notEmptyOrNull]) {
-                    
                     subViews.defaultTextfield.text=[self.data ojsk:@"driving_country"];
                     NSMutableDictionary*mdic=[NSMutableDictionary new];
                     [mdic setObject:[self.data ojsk:@"driving_country"] forKey:@"name"];
@@ -104,14 +101,9 @@
 //                    subViews.userInteractionEnabled=NO;
                 }
 //                [_driving_countryView.defaultTextfield.data ojsk:@"id"]
-                
             }
         }
-        
     }
-    
-    
-    
     //    [self rightButton:@"相關頁面" image:nil sel:@selector(rightBtnClick:)];
 }
 -(void)submitBtnClick:(UIButton*)btn{
@@ -142,8 +134,20 @@
                     [dictparam setObject:[self.userInfo ojsk:@"driving_country_id"] forKey:@"driving_country_id"];
                 }
             }
-            
-            
+            if ([data ojk:@"driving_expire_date"]) {
+                [dictparam setObject:[data ojk:@"driving_expire_date"] forKey:@"driving_expire_date"];
+                
+            }else
+            {
+                
+            }
+            if ([data ojk:@"driving_cate"]) {
+                [dictparam setObject:[data ojk:@"driving_cate"] forKey:@"driving_cate"];
+             
+            }else
+            {
+                
+            }
             [kUserCenterService ucenter_authentication:dictparam withBlock:^(id data, int status, NSString *msg) {
                 [weakSelf.navigationController popViewControllerAnimated:YES];
             }];
@@ -177,7 +181,7 @@
         }];
         float myx = 15;
         for (int i=0; i<arraytitle.count; i++) {
-             WSSizeButton*btnSwitch=[RHMethods buttonWithframe:CGRectMake(myx, 0, width, viewSwichType.frameHeight) backgroundColor:nil text:arraytitle[i] font:14 textColor:rgb(102, 102, 102) radius:0 superview:viewSwichType];
+            WSSizeButton*btnSwitch=[RHMethods buttonWithframe:CGRectMake(myx, 0, width, viewSwichType.frameHeight) backgroundColor:nil text:arraytitle[i] font:14 textColor:rgb(102, 102, 102) radius:0 superview:viewSwichType];
             [btnSwitch setImageStr:@"checkedoff" SelectImageStr:@"checkedon"];
             btnSwitch.frameWidth = [arraytitle[i] widthWithFont:14] +28+3+10;
             myx = btnSwitch.frameXW +3;
@@ -185,7 +189,7 @@
             [btnSwitch imgbeCY];
             [btnSwitch setBtnLableFrame:CGRectMake(28, 0, btnSwitch.frameWidth-btnSwitch.imgframeXW-10, btnSwitch.frameHeight)];
             [_btnGroup addButton:btnSwitch];
-            
+          
         }
     }
     {
@@ -212,18 +216,27 @@
 //                                 @"placeholder":@"未選擇",
                                  @"placeholder":kS(@"IdentityAuthentication", @"PleaseUpload"),
                                  @"isMust":@"1",
-                                 }
-                             
-                             
+                             },
+                             @{//驾照类别
+                                 @"classStr":@"FCTextFieldCellView",
+                                 //                                 @"name":@"護照",
+                                 @"name":@"驾照类别",
+                                 @"requestkey":@"driving_cate",
+                                 @"keyArray":@[@"driving_cate",],
+                                 @"placeholder":@"請輸入駕照類別",
+                                 @"placeholder":kS(@"IdentityAuthentication", @"driving_cate"),
+                                 @"isMust":@"1",
+                             }
                              ];
-        
         arraytitle=[arraytitle toBeMutableObj];
         [_mtableView.defaultSection.noReUseViewArray removeAllObjects];
         for (int i=0; i<arraytitle.count; i++) {
             NSMutableDictionary*dic=arraytitle[i];
             BaseFormCellView*viewCell=[UIView getViewWithConfigData:dic];
             [_centerObj1.noReUseViewArray addObject:viewCell];
-            [viewCell addViewTarget:self select:@selector(cellViewClick:)];
+//            if (i!=arraytitle.count-2) {
+//                [viewCell addViewTarget:self select:@selector(cellViewClick:)];
+//            }
             if ([viewCell isKindOfClass:[viewCell class]]) {
                 viewCell.defaultTextfield.textColor=rgb(13, 107, 154);
             }
@@ -284,14 +297,26 @@
                                  @"placeholder":kS(@"IdentityAuthentication", @"PleaseUpload"),
                                  @"isMust":@"1",
                                  },
-                             @{
+                             @{//駕駛證截止日期
                                  @"classStr":@"FCSelectCellView",
                                  //                                 @"name":@"護照",
-                                 @"name":kS(@"IdentityAuthentication", @"Passport"),
-                                 @"requestkey":@"endTime",
-                                 @"keyArray":@[@"passport",],
+                                 @"name":kS(@"IdentityAuthentication", @"driving_expire_date"),
+                                 @"requestkey":@"driving_expire_date",
+                                 @"keyArray":@[@"driving_expire_date",],
+                                 @"selectsubtype":@"dateselect",
+                                 @"maximumDate":@"forever",
                                  //                                 @"placeholder":@"未選擇",
-                                 @"placeholder":kS(@"IdentityAuthentication", @"PleaseUpload"),
+                                 @"placeholder":kS(@"IdentityAuthentication", @"endTime"),
+                                 @"isMust":@"1",
+                             },
+                             @{//驾照类别
+                                 @"classStr":@"FCTextFieldCellView",
+                                 //                                 @"name":@"護照",
+                                 @"name":@"驾照类别",
+                                 @"requestkey":@"driving_cate",
+                                 @"keyArray":@[@"driving_cate",],
+                                 @"placeholder":@"請輸入駕照類別",
+                                 @"placeholder":kS(@"IdentityAuthentication", @"driving_cate"),
                                  @"isMust":@"1",
                              }];
         
@@ -301,7 +326,8 @@
             NSMutableDictionary*dic=arraytitle[i];
             BaseFormCellView*viewCell=[UIView getViewWithConfigData:dic];
             [_centerObj2.noReUseViewArray addObject:viewCell];
-            if (![[dic ojsk:@"requestkey"] isEqualToString:@"driving_country_id"]) {
+            if (![[dic ojsk:@"requestkey"] isEqualToString:@"driving_country_id"]&&i!=arraytitle.count-2) {
+                
                 [viewCell addViewTarget:self select:@selector(cellViewClick:)];
             }
             if ([[dic ojsk:@"requestkey"] isEqualToString:@"driving_country_id"]) {
@@ -346,13 +372,11 @@
         [_lastObj.noReUseViewArray addObject:btnCommit];
         [btnCommit addViewTarget:self select:@selector(submitBtnClick:)];
     }
-    
     {
 //        UILabel*lbRemark=[RHMethods lableX:15 Y:20 W:kScreenWidth-30 Height:0 font:12 superview:nil withColor:rgb(153, 153, 153) text:@"請完成以上證件上傳并提交\n平台將在4小時內完成認證操作\n工作時間：週一~週日（9:00-18:00）"];
         UILabel*lbRemark=[RHMethods lableX:15 Y:20 W:kScreenWidth-30 Height:0 font:12 superview:nil withColor:rgb(153, 153, 153) text:[NSString stringWithFormat:@"%@\n%@\n%@",kS(@"IdentityAuthentication", @"AboveDocuments"),kS(@"IdentityAuthentication", @"OperationIn4Hours"),kS(@"IdentityAuthentication", @"MondayToSunday")]];
         [_lastObj.noReUseViewArray addObject:lbRemark];
     }
-    
 }
 
 -(void)cellViewClick:(BaseFormCellView*)viewCell{
@@ -360,7 +384,6 @@
     if (![viewCell isKindOfClass:[FCSelectCellView class]]) {
         return;
     }
-    
     NSMutableDictionary*mdataDic=viewCell.data;
     NSDictionary*dic=nil;
     //日本驾证
@@ -420,7 +443,6 @@
                         },
                 ],
             };
-            
             //國際駕駛證
         }else    if ([[mdataDic ojsk:@"requestkey"] isEqualToString:@"inter_driving_front__inter_driving_behind"]) {
             dic=@{
@@ -467,18 +489,50 @@
     }
     else
     {
-        NSDate *now = [NSDate date];
-        NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
-        fmt.dateFormat = @"yyyy-MM-dd";
-        NSString *nowStr = [fmt stringFromDate:now];
-           
-        [CGXPickerView showDatePickerWithTitle:@"截止时间" DateType:UIDatePickerModeDate DefaultSelValue:nowStr MinDateStr:nowStr MaxDateStr:@"2099-01-01" IsAutoSelect:NO Manager:nil ResultBlock:^(NSString *selectValue) {
-            
-        }];
+//        NSDate *now = [NSDate date];
+//        NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
+//        fmt.dateFormat = @"yyyy-MM-dd";
+//        NSString *nowStr = [fmt stringFromDate:now];
+//        [CGXPickerView showDatePickerWithTitle:@"截止时间" DateType:UIDatePickerModeDate DefaultSelValue:nowStr MinDateStr:nowStr MaxDateStr:@"2099-01-01" IsAutoSelect:NO Manager:nil ResultBlock:^(NSString *selectValue) {
+//
+//        }];
+//         UITextField*currentlb=self.defaultTextfield;
+//                NSDateFormatter *dateFormatter=[[NSDateFormatter alloc] init];
+//                NSString*formStr=@"yyyy-MM-dd HH:mm";
+//                PGDatePickerMode pickerMode=PGDatePickerModeDateHourMinute;
+//                if ([[self.data ojsk:@"selectsubtype"] isEqualToString:@"dateselect"]) {
+//                    formStr=@"yyyy-MM-dd";
+//                    pickerMode=PGDatePickerModeDate;
+//                }else if ([[self.data ojsk:@"selectsubtype"] isEqualToString:@"yearselect"]) {
+//                    formStr=@"yyyy";
+//                    pickerMode=PGDatePickerModeYear;
+//                }
+//                [dateFormatter setDateFormat:formStr];
+//                NSDate *dateT=[dateFormatter dateFromString:currentlb.text];
+//                if (![currentlb.text notEmptyOrNull]) {
+//                    dateT=[NSDate date];
+//                }
+//                SelectTimeView *dateView=[SelectTimeView showWithTime:[NSString stringWithFormat:@"%f",[dateT timeIntervalSince1970]] withCallBack:^(id data, int status, NSString *msg) {
+//                    NSString*timestr= [dateFormatter stringFromDate: [NSDate dateWithTimeIntervalSince1970:[data integerValue]]];
+//                    currentlb.text=timestr;
+//                }];
+//                {
+//                    NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
+//                    fmt.dateFormat = @"yyyy";
+//                    //#warning 真机调试下, 必须加上这段
+//                    fmt.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US"];
+//                    [fmt dateFromString:@"1900"];
+//                    NSDate *date=[fmt dateFromString:@"1900"];
+//                    dateView.datePicker.minimumDate=date;
+//        //            NSString*datestr=[fmt stringFromDate:date];
+//                }
+//                
+//                dateView.datePicker.datePickerMode = pickerMode;
+//                if ([[self.data ojsk:@"maximumDate"] isEqualToString:@"forever"]) {
+//                    dateView.datePicker.minimumDate=[NSDate new];
+//                    dateView.datePicker.maximumDate=nil;
+//                }
     }
- 
-    
-    
 }
 
 #pragma mark  request data from the server use tableview
@@ -486,7 +540,6 @@
 #pragma mark - request data from the server
 
 #pragma mark - event listener function
-
 
 #pragma mark - delegate function
 

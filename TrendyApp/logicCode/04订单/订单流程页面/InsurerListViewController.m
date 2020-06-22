@@ -72,12 +72,22 @@
         SectionObj*obj=[SectionObj new];
         [_mtableView.sectionArray addObject:obj];
         
-        WSSizeButton*btnAdd=[RHMethods buttonWithframe:CGRectMake(0, 20, 140, 34) backgroundColor:nil text:kS(@"insurerInfo", @"add_insurer") font:13 textColor:rgb(13, 112, 161) radius:5 superview:viewContent];
+        WSSizeButton*btnAdd=[RHMethods buttonWithframe:CGRectMake(WScale(30), WScale(20), WScale(142.5), WScale(35)) backgroundColor:nil text:kS(@"insurerInfo", @"add_insurer") font:13 textColor:rgb(13, 112, 161) radius:5 superview:viewContent];
         [obj.noReUseViewArray addObject:btnAdd];
         btnAdd.layer.borderWidth=1;
-        [btnAdd beCX];
+//        [btnAdd beCX];
         btnAdd.layer.borderColor=rgb(13, 112, 161).CGColor;
         [btnAdd addViewClickBlock:^(UIView *view) {
+            [weakSelf pushController:[AddInsurerInformationViewController class] withInfo:nil withTitle:kST(@"addInsurerInfo") withOther:nil withAllBlock:^(id data, int status, NSString *msg) {
+                [weakSelf request];
+            }];
+        }];
+        WSSizeButton*btnCancel=[RHMethods buttonWithframe:CGRectMake(WScale(212.5), WScale(20), WScale(142.5), WScale(35)) backgroundColor:nil text:kS(@"insurerInfo", @"add_insurer") font:13 textColor:REDCOLOR radius:5 superview:viewContent];
+        [obj.noReUseViewArray addObject:btnCancel];
+        btnCancel.layer.borderWidth=1;
+//        [btnCancel beCX];
+        btnCancel.layer.borderColor=REDCOLOR.CGColor;
+        [btnCancel addViewClickBlock:^(UIView *view) {
             [weakSelf pushController:[AddInsurerInformationViewController class] withInfo:nil withTitle:kST(@"addInsurerInfo") withOther:nil withAllBlock:^(id data, int status, NSString *msg) {
                 [weakSelf request];
             }];

@@ -86,6 +86,7 @@
             [bindeViewArray addObjectsFromArray:array];
         }
     }
+    
     [self upLoadDataWithDataBindeViewArray:bindeViewArray withBlock:^(id data, int status, NSString *msg) {
         if (status==200) {
             NSMutableDictionary*dictparam=[NSMutableDictionary new];
@@ -115,7 +116,6 @@
     }];
     
 }
-
 -(void)getNoMustRequestDictionaryWithformCellViewArray:(NSMutableArray*)formCellViewArray withBlock:(AllcallBlock)block{
     
     NSMutableArray*bindeViewArray=[NSMutableArray new];

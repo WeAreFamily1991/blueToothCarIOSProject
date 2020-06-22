@@ -70,13 +70,9 @@ static dispatch_once_t utilityLanguageService;
 -(NSString *)pagetitleKey{
     if (_pagetitleKey==nil) {
         _pagetitleKey=[NSString stringWithFormat:@"%@_title",self.pageKey];
-        
-        
     }
     return _pagetitleKey;
 }
-
-
 -(void)setAppLanguage:(NSString *)appLanguage{
     
     [[Utility_Location shareInstence] removeCityInfo];

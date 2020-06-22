@@ -26,9 +26,6 @@
     [self addViewTarget:self select:@selector(selectBtnClick:)];
 }
 
-
-
-
 -(void)selectBtnClick:(UIView*)btn{
     [UTILITY.currentViewController.view endEditing:YES];
     __weak __typeof(self) weakSelf = self;
