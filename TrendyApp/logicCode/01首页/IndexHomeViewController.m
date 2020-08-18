@@ -151,7 +151,6 @@
 }
 #pragma mark -   write UI
 -(void)addView{
-    
     _mtableView =[[MYRHTableView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight-49-kIphoneXBottom) style:UITableViewStyleGrouped];
     _mtableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.view addSubview:_mtableView];
@@ -166,12 +165,9 @@
         self.automaticallyAdjustsScrollViewInsets = NO;
     }
     {
-        
         SectionObj*obj=[SectionObj new];
         [_mtableView.sectionArray addObject:obj];
-        
         UIView*viewHeader=[UIView viewWithFrame:CGRectMake(0, 0, kScreenWidth, 557) backgroundcolor:rgb(246, 246, 246) superView:nil];
-        
         [obj.noReUseViewArray addObject:viewHeader];
         LJImageRollingView*viewScrollView=[LJImageRollingView viewWithFrame:CGRectMake(0, 0, kScreenWidth, 286+kTopHeight-64-60) backgroundcolor:nil superView:viewHeader];
         _viewScrollView=viewScrollView;
@@ -181,7 +177,6 @@
         [viewxx upDataMe];
         {
             UIView*viewCenterMenu=[UIView viewWithFrame:CGRectMake(0, viewxx.frameYH+15, kScreenWidth, 109) backgroundcolor:rgbwhiteColor superView:viewHeader];
-            
 //            NSArray*arraytitle=@[@"自助找車",@"快捷租車",@"超值租車",@"租新車",@"特殊车辆",];
             NSArray*arraytitle=@[kS(@"KeyHome", @"selfHelpFindingCar"),
                                  kS(@"KeyHome", @"quickRentCar"),

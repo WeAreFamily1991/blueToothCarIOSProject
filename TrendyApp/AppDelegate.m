@@ -5,7 +5,12 @@
 //  Created by 55like on 2019/2/19.
 //  Copyright © 2019 55like. All rights reserved.
 //
-
+#import "Utility.h"
+//#import "DMHessian.h"
+#import "RHMethods.h"
+#import "Foundation.h"
+#import <SVProgressHUD.h>
+#import "PLTextView.h"
 #import "AppDelegate.h"
 //#import "GoogleMaps.h"
 #import <GoogleMaps/GoogleMaps.h>
@@ -20,7 +25,7 @@
 #import "Utility_pushService.h"
 #import "Utility_Location.h"
 #import "SuccessfulApplicationViewController.h"
-
+#import "NSDictionary+expanded.h"
 #import <ShareSDK/ShareSDK.h>
 #import "WXApi.h"
 @interface AppDelegate ()<JPUSHRegisterDelegate>
@@ -46,7 +51,8 @@
     DLog(@"abool1:%d,abool2:%d",abool1,abool2);
     [kLanguageService appLanguage];
     [UTILITY setAddValue:self forKey:@"AppDelegate"];
-    
+//    NSDictionary *dic =krequestParam;
+   
     //Required
     //notice: 3.0.0 及以后版本注册可以这样写，也可以继续用之前的注册方式
     JPUSHRegisterEntity * entity = [[JPUSHRegisterEntity alloc] init];
@@ -87,6 +93,7 @@
     [self shareInit];
     return YES;
 }
+
 -(void)shareInit{
     
     [ShareSDK registPlatforms:^(SSDKRegister *platformsRegister) {
@@ -128,7 +135,6 @@
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 }
-
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.

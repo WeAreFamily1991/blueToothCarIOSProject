@@ -102,9 +102,11 @@
 //        titleStr=[NSString stringWithFormat:@"%@%@",titleStr,actionType];
         titleStr=[NSString stringWithFormat:@"%@",titleStr];
         
+        if ([actionType isEqualToString:@"cancel"]) {
+           
+        }
         UIAlertController*alertcv=[UIAlertController alertControllerWithTitle:titleStr message:nil preferredStyle:UIAlertControllerStyleAlert];
-        
-        
+                
         [alertcv addAction:[UIAlertAction actionWithTitle:kS(@"main_order", @"confirm") style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             krequestParam
             [dictparam setObject:actionType forKey:@"action"];
@@ -146,16 +148,11 @@
                       [UTILITY.currentViewController pushController:[SelectWebUrlViewController class] withInfo:nil withTitle:@"" withOther:@{@"url":[NSString stringWithFormat:@"http://h5.trendycarshare.jp/home/orders/extend?apptype=app%@",@""]}];
                 }]];
             }
-            
-          
             [alertcv addAction:[UIAlertAction actionWithTitle:kS(@"advance_return_extend_use", @"cancel") style:UIAlertActionStyleCancel handler:nil]];
             [UTILITY.currentViewController presentViewController:alertcv animated:YES completion:^{
                 
             }];
-            
-            
         }];
-        
     }else if([actionType isEqualToString:@"comment"]){
         [UTILITY.currentViewController pushController:[IWantToEvaluateViewController class] withInfo:[orderData ojsk:@"orderid"] withTitle:kST(@"order_comment") withOther:nil withAllBlock:^(id data, int status, NSString *msg) {
             block(nil,200,nil);

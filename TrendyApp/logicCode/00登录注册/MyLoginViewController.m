@@ -11,6 +11,7 @@
 #import "MyRegistViewController.h"
 #import <ShareSDK/ShareSDK.h>
 #import <ShareSDKExtension/ShareSDK+Extension.h>
+#import "JPUSHService.h"
 @interface MyLoginViewController  ()
 {
 }
@@ -167,6 +168,7 @@
                 }];
             }else{
                 [kUtility_Login setUserId:[userDict valueForJSONStrKey:@"uid"]];
+                [self setUpJpushWithalias:[userDict valueForJSONStrKey:@"uid"]];
                 [kUtility_Login setUserToken:[userDict valueForJSONStrKey:@"token"]];
                 [kUtility_Login setUserData:userDict];
                 
@@ -179,5 +181,11 @@
     }];
     
 }
-
+- (void)setUpJpushWithalias:(NSString *)alias
+{
+    ///别名
+   
+    [JPUSHService setTags:nil alias:alias fetchCompletionHandle:^(int iResCode, NSSet *iTags, NSString *iAlias) {
+    }];
+}
 @end
